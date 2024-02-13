@@ -7,12 +7,17 @@
 script = ExtResource("1_ttwlg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_6woh6")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="CameraPersonnage" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
 limit_right = 2300
 limit_bottom = 1300
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+drag_left_margin = 0.5
+drag_top_margin = 0.5
+drag_right_margin = 0.5
+drag_bottom_margin = 0.5

@@ -12,3 +12,11 @@ texture = ExtResource("1_tnr1h")
 
 [node name="Node2D" parent="." instance=ExtResource("2_7cugp")]
 position = Vector2(576, 324)
+
+[node name="CameraFixe" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(256, 324)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
