@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1l77fycrhfps"]
+
+[ext_resource type="Texture2D" uid="uid://cxl32qhuicm70" path="res://Assets/baserroomm.png" id="1_sqgih"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, 0)
+texture = ExtResource("1_sqgih")

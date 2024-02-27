@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck1hc2rcxhs1b"]
+
+[ext_resource type="Script" path="res://Scenes/DungeonGenerator/DungeonGenerator.gd" id="1_clwk3"]
+[ext_resource type="Texture2D" uid="uid://ckwldj388wihx" path="res://icon.svg" id="2_4fdao"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_307yq"]
+texture = ExtResource("2_4fdao")
+0:0/size_in_atlas = Vector2i(8, 8)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mdxvg"]
+sources/0 = SubResource("TileSetAtlasSource_307yq")
+
+[node name="DungeonGenerator" type="Node2D"]
+script = ExtResource("1_clwk3")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_mdxvg")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327676, 0, 0)
