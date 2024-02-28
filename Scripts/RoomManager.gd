@@ -1,6 +1,6 @@
 extends Node
 
-var roomPrefab = preload("res://Levels/BaseRoom.tscn")
+var roomPrefab = preload("res://Scenes/BaseRoom.tscn")
 
 var maxRooms : int = 10
 var minRooms : int = 8
