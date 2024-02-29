@@ -42,6 +42,17 @@ func _StartRoomGenerationFromRoom(roomIndex :Vector2):
 	roomObjects.push_back(initialRoom)
 	return
 
+
+func _TryGeneration(roomIndex : Vector2) :
+	QueueDeVecteur.push_back(roomIndex)
+	var x = roomIndex.x
+	var y = roomIndex.y
+	roomGrid[x][y] = 1 
+	roomCount+=1
+	
+	
+	return
+	
 func _GetPositionFromGridIndex(gridIndex):
 	var gridX : int = gridIndex[0]
 	var gridY : int = gridIndex[1]

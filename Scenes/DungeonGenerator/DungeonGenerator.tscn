@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://ck1hc2rcxhs1b"]
 
 [ext_resource type="Script" path="res://Scenes/DungeonGenerator/DungeonGenerator.gd" id="1_clwk3"]
-[ext_resource type="Texture2D" uid="uid://ckwldj388wihx" path="res://icon.svg" id="2_4fdao"]
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="3_e7d8l"]
+[ext_resource type="Texture2D" uid="uid://du75cxc2a07l3" path="res://salle.png" id="3_wfocj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2b0u7"]
-texture = ExtResource("2_4fdao")
-0:0/size_in_atlas = Vector2i(8, 8)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kdxw"]
+texture = ExtResource("3_wfocj")
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_1gyyy"]
-tile_size = Vector2i(128, 128)
-sources/0 = SubResource("TileSetAtlasSource_2b0u7")
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_0kdxw")
 
 [node name="DungeonGenerator" type="Node2D"]
 script = ExtResource("1_clwk3")
