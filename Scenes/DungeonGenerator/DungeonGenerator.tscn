@@ -1,17 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck1hc2rcxhs1b"]
+[gd_scene load_steps=12 format=3 uid="uid://ck1hc2rcxhs1b"]
 
 [ext_resource type="Script" path="res://Scenes/DungeonGenerator/DungeonGenerator.gd" id="1_clwk3"]
+[ext_resource type="Texture2D" uid="uid://cv5xmo681mwsy" path="res://blankroom.png" id="2_ltewn"]
 [ext_resource type="Script" path="res://Scripts/TileMap.gd" id="3_e7d8l"]
 [ext_resource type="Texture2D" uid="uid://du75cxc2a07l3" path="res://salle.png" id="3_wfocj"]
+[ext_resource type="Texture2D" uid="uid://bqlymf5lk7m1h" path="res://treasureroom.png" id="4_02wuk"]
+[ext_resource type="Texture2D" uid="uid://cymkhcvtpfaux" path="res://bossroom.png" id="5_fa7gx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfnsw"]
+texture = ExtResource("2_ltewn")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kdxw"]
 texture = ExtResource("3_wfocj")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ti6xh"]
+texture = ExtResource("4_02wuk")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ef2bb"]
+texture = ExtResource("5_fa7gx")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_1gyyy"]
 tile_size = Vector2i(64, 64)
 sources/1 = SubResource("TileSetAtlasSource_0kdxw")
+sources/0 = SubResource("TileSetAtlasSource_rfnsw")
+sources/2 = SubResource("TileSetAtlasSource_ti6xh")
+sources/3 = SubResource("TileSetAtlasSource_ef2bb")
 
 [node name="DungeonGenerator" type="Node2D"]
 script = ExtResource("1_clwk3")
