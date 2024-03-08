@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cymkhcvtpfaux"
-path="res://.godot/imported/bossroom.png-f21a0fea2ada4075f4f412cb982bf7b7.ctex"
+uid="uid://du75cxc2a07l3"
+path="res://.godot/imported/salle.png-8fc0d93f16ee9f2834e2bb9ac0b41b2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bossroom.png"
-dest_files=["res://.godot/imported/bossroom.png-f21a0fea2ada4075f4f412cb982bf7b7.ctex"]
+source_file="res://Assets/Map/salle.png"
+dest_files=["res://.godot/imported/salle.png-8fc0d93f16ee9f2834e2bb9ac0b41b2d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du75cxc2a07l3"
-path="res://.godot/imported/salle.png-4b513035c79f5fffced19c5c3655fc95.ctex"
+uid="uid://b1ethgo1kgall"
+path="res://.godot/imported/porte.png-e0ac4a111e20f34697b6dda77aa64e02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://salle.png"
-dest_files=["res://.godot/imported/salle.png-4b513035c79f5fffced19c5c3655fc95.ctex"]
+source_file="res://Assets/Salle/porte.png"
+dest_files=["res://.godot/imported/porte.png-e0ac4a111e20f34697b6dda77aa64e02.ctex"]
 
 [params]
 

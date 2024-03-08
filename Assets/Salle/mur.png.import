@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv5xmo681mwsy"
-path="res://.godot/imported/blankroom.png-d7728f6b897029a25e82481198d8b82a.ctex"
+uid="uid://bs53pkhhkexxs"
+path="res://.godot/imported/mur.png-5476169267ad2a6891f98782ae5e35ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blankroom.png"
-dest_files=["res://.godot/imported/blankroom.png-d7728f6b897029a25e82481198d8b82a.ctex"]
+source_file="res://Assets/Salle/mur.png"
+dest_files=["res://.godot/imported/mur.png-5476169267ad2a6891f98782ae5e35ff.ctex"]
 
 [params]
 

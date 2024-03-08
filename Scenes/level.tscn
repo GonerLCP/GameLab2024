@@ -22,3 +22,5 @@ anchor_mode = 0
 position = Vector2(256, 324)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(164.608, -164.74)
+scale = Vector2(3.27612, 2.078)

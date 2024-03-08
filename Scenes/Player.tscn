@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://btefahmksrsjs"]
+[gd_scene load_steps=4 format=3 uid="uid://btefahmksrsjs"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMove.gd" id="1_ttwlg"]
 [ext_resource type="Texture2D" uid="uid://ckwldj388wihx" path="res://icon.svg" id="2_6woh6"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rw5ru"]
+size = Vector2(62, 31)
+
+[node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_ttwlg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -21,3 +24,8 @@ drag_left_margin = 0.5
 drag_top_margin = 0.5
 drag_right_margin = 0.5
 drag_bottom_margin = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_rw5ru")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

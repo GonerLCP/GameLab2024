@@ -55,7 +55,7 @@ func _StartRoomGenerationFromRoom(roomIndex :Vector2): #Fonction qui génère la
 	QueueDeVecteur.push_back(roomIndex) #Rajoute dans la pile les coordonnées de la salle
 	roomGrid[roomIndex.x][roomIndex.y] = 1 #Renseigne dans le tableau qu à cet endroit la il y'a une case, permet de stocker les infos quoi, en réalité on à pas besoin des tilempas le tableau suffit
 	roomCount += 1 #Augmente le nombre de room mis
-	$TileMap.set_cell(0,roomIndex,3,Vector2i(0, 0),0) #Je vais l'écrire ici pour pas l'oublier : Ca vient chercher dans le noeud TileMapla fonction set_cell qui prend en argument le layer, donc genre l'odre dans la scene, le z dans unity, ensuite la position dans la tilemap, l'id de la tileset et finalement un vecteur de je sais pas à quoi il sert mais j'ai vu un mec sur reddit de mettre ça et ça marche /shrug
+	$TileMap.set_cell(0,roomIndex,4,Vector2i(0, 0),0) #Je vais l'écrire ici pour pas l'oublier : Ca vient chercher dans le noeud TileMapla fonction set_cell qui prend en argument le layer, donc genre l'odre dans la scene, le z dans unity, ensuite la position dans la tilemap, l'id de la tileset et finalement un vecteur de je sais pas à quoi il sert mais j'ai vu un mec sur reddit de mettre ça et ça marche /shrug
 	return
 
 func _TryGeneration(roomIndex : Vector2) : #Essaie de generer une salle dans le niveau
