@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxl32qhuicm70"
-path="res://.godot/imported/baserroomm.png-85dd61b5ec833ddf38fc55dddbe1facd.ctex"
+uid="uid://bqlymf5lk7m1h"
+path="res://.godot/imported/treasureroom.png-32c8d5b16d85a243a622ef690a141a1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/baserroomm.png"
-dest_files=["res://.godot/imported/baserroomm.png-85dd61b5ec833ddf38fc55dddbe1facd.ctex"]
+source_file="res://zPetitAngePartitTropTot/Assets/Map/treasureroom.png"
+dest_files=["res://.godot/imported/treasureroom.png-32c8d5b16d85a243a622ef690a141a1e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtpgcxf35otqx"
-path="res://.godot/imported/sol.png-9cb555d223e76ffd1d6f6d27817860ab.ctex"
+uid="uid://cxs23niesv6n2"
+path="res://.godot/imported/Trou.png-a7d5f53c70c38a6200e196c6ea17cf08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Salle/sol.png"
-dest_files=["res://.godot/imported/sol.png-9cb555d223e76ffd1d6f6d27817860ab.ctex"]
+source_file="res://zPetitAngePartitTropTot/Assets/Salle/Trou.png"
+dest_files=["res://.godot/imported/Trou.png-a7d5f53c70c38a6200e196c6ea17cf08.ctex"]
 
 [params]
 

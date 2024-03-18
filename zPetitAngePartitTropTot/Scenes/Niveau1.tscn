@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://b2lih6tmtnb4k"]
 
-[ext_resource type="Texture2D" uid="uid://bs53pkhhkexxs" path="res://Assets/Salle/mur.png" id="1_byyk5"]
-[ext_resource type="Texture2D" uid="uid://b1ethgo1kgall" path="res://Assets/Salle/porte.png" id="2_3jlbh"]
-[ext_resource type="Texture2D" uid="uid://dtpgcxf35otqx" path="res://Assets/Salle/sol.png" id="3_f0bic"]
-[ext_resource type="Texture2D" uid="uid://cxs23niesv6n2" path="res://Assets/Salle/Trou.png" id="4_obosf"]
-[ext_resource type="PackedScene" uid="uid://btefahmksrsjs" path="res://Scenes/Player.tscn" id="5_sh58y"]
+[ext_resource type="Texture2D" uid="uid://bs53pkhhkexxs" path="res://zPetitAngePartitTropTot/Assets/Salle/mur.png" id="1_byyk5"]
+[ext_resource type="Texture2D" uid="uid://b1ethgo1kgall" path="res://zPetitAngePartitTropTot/Assets/Salle/porte.png" id="2_3jlbh"]
+[ext_resource type="Texture2D" uid="uid://dtpgcxf35otqx" path="res://zPetitAngePartitTropTot/Assets/Salle/sol.png" id="3_f0bic"]
+[ext_resource type="Texture2D" uid="uid://cxs23niesv6n2" path="res://zPetitAngePartitTropTot/Assets/Salle/Trou.png" id="4_obosf"]
+[ext_resource type="PackedScene" uid="uid://btefahmksrsjs" path="res://zPetitAngePartitTropTot/Scenes/Player.tscn" id="5_sh58y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_geq03"]
 texture = ExtResource("1_byyk5")

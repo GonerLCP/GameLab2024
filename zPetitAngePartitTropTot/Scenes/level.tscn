@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvpeskbwd6wud"]
 
-[ext_resource type="Texture2D" uid="uid://dqe4g12fwmxd5" path="res://Assets/sky_background_by_ombobon-d8z7oby.jpg" id="1_tnr1h"]
-[ext_resource type="Script" path="res://Scripts/RoomManager.gd" id="1_xif2o"]
-[ext_resource type="PackedScene" uid="uid://btefahmksrsjs" path="res://Scenes/Player.tscn" id="2_7cugp"]
+[ext_resource type="Texture2D" uid="uid://dqe4g12fwmxd5" path="res://zPetitAngePartitTropTot/Assets/sky_background_by_ombobon-d8z7oby.jpg" id="1_tnr1h"]
+[ext_resource type="Script" path="res://zPetitAngePartitTropTot/Scripts/RoomManager.gd" id="1_xif2o"]
+[ext_resource type="PackedScene" uid="uid://btefahmksrsjs" path="res://zPetitAngePartitTropTot/Scenes/Player.tscn" id="2_7cugp"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xif2o")

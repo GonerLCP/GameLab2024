@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs53pkhhkexxs"
-path="res://.godot/imported/mur.png-5476169267ad2a6891f98782ae5e35ff.ctex"
+uid="uid://du75cxc2a07l3"
+path="res://.godot/imported/salle.png-77483ed3f441e0fb738355ad6c11e013.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Salle/mur.png"
-dest_files=["res://.godot/imported/mur.png-5476169267ad2a6891f98782ae5e35ff.ctex"]
+source_file="res://zPetitAngePartitTropTot/Assets/Map/salle.png"
+dest_files=["res://.godot/imported/salle.png-77483ed3f441e0fb738355ad6c11e013.ctex"]
 
 [params]
 

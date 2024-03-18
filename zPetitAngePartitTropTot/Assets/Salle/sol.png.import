@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://553tri5d5xdo"
-path="res://.godot/imported/startRoom.png-7f92fb7277eab3413f3353cd3f95361c.ctex"
+uid="uid://dtpgcxf35otqx"
+path="res://.godot/imported/sol.png-6e693df05221cb56cb6bb847f9c9538c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/startRoom.png"
-dest_files=["res://.godot/imported/startRoom.png-7f92fb7277eab3413f3353cd3f95361c.ctex"]
+source_file="res://zPetitAngePartitTropTot/Assets/Salle/sol.png"
+dest_files=["res://.godot/imported/sol.png-6e693df05221cb56cb6bb847f9c9538c.ctex"]
 
 [params]
 

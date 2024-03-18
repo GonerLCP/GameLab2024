@@ -1,6 +1,6 @@
 extends Node2D
 
-var roomPrefab = preload("res://Scenes/BaseRoom.tscn") #brasse/20
+#var roomPrefab = preload("res://Scenes/BaseRoom.tscn") #brasse/20
 
 var maxRooms : int = 15
 var minRooms : int = 8
@@ -81,7 +81,7 @@ func _TryGeneration(roomIndex : Vector2) : #Essaie de generer une salle dans le 
 	#return Vector2(roomWidth*(gridX - gridSizeX /2), roomHeight * (gridY - gridSizeY /2))
 
 func inst(pos) : #Fonction d'instnatiation, argument = position du truc
-	var instance = roomPrefab.instantiate()
+	var instance #= roomPrefab.instantiate()
 	instance.position = pos
 	add_child(instance)
 

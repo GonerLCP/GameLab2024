@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du75cxc2a07l3"
-path="res://.godot/imported/salle.png-8fc0d93f16ee9f2834e2bb9ac0b41b2d.ctex"
+uid="uid://dqe4g12fwmxd5"
+path="res://.godot/imported/sky_background_by_ombobon-d8z7oby.jpg-f6f4aab92198ff61ecda670b8e73a3ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/salle.png"
-dest_files=["res://.godot/imported/salle.png-8fc0d93f16ee9f2834e2bb9ac0b41b2d.ctex"]
+source_file="res://zPetitAngePartitTropTot/Assets/sky_background_by_ombobon-d8z7oby.jpg"
+dest_files=["res://.godot/imported/sky_background_by_ombobon-d8z7oby.jpg-f6f4aab92198ff61ecda670b8e73a3ba.ctex"]
 
 [params]
 

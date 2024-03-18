@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://ck1hc2rcxhs1b"]
 
-[ext_resource type="Script" path="res://Scenes/DungeonGenerator/DungeonGenerator.gd" id="1_clwk3"]
-[ext_resource type="Texture2D" uid="uid://cv5xmo681mwsy" path="res://Assets/Map/blankroom.png" id="2_ltewn"]
-[ext_resource type="Script" path="res://Scripts/TileMap.gd" id="3_e7d8l"]
-[ext_resource type="Texture2D" uid="uid://du75cxc2a07l3" path="res://Assets/Map/salle.png" id="3_wfocj"]
-[ext_resource type="Texture2D" uid="uid://bqlymf5lk7m1h" path="res://Assets/Map/treasureroom.png" id="4_02wuk"]
-[ext_resource type="Texture2D" uid="uid://cymkhcvtpfaux" path="res://Assets/Map/bossroom.png" id="5_fa7gx"]
-[ext_resource type="Texture2D" uid="uid://553tri5d5xdo" path="res://Assets/Map/startRoom.png" id="6_7xvkh"]
+[ext_resource type="Script" path="res://zPetitAngePartitTropTot/Scenes/DungeonGenerator/DungeonGenerator.gd" id="1_clwk3"]
+[ext_resource type="Texture2D" uid="uid://cv5xmo681mwsy" path="res://zPetitAngePartitTropTot/Assets/Map/blankroom.png" id="2_ltewn"]
+[ext_resource type="Script" path="res://zPetitAngePartitTropTot/Scripts/TileMap.gd" id="3_e7d8l"]
+[ext_resource type="Texture2D" uid="uid://du75cxc2a07l3" path="res://zPetitAngePartitTropTot/Assets/Map/salle.png" id="3_wfocj"]
+[ext_resource type="Texture2D" uid="uid://bqlymf5lk7m1h" path="res://zPetitAngePartitTropTot/Assets/Map/treasureroom.png" id="4_02wuk"]
+[ext_resource type="Texture2D" uid="uid://cymkhcvtpfaux" path="res://zPetitAngePartitTropTot/Assets/Map/bossroom.png" id="5_fa7gx"]
+[ext_resource type="Texture2D" uid="uid://553tri5d5xdo" path="res://zPetitAngePartitTropTot/Assets/Map/startRoom.png" id="6_7xvkh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfnsw"]
 texture = ExtResource("2_ltewn")

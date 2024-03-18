@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://26okc2klh1lh"]
+
+[ext_resource type="PackedScene" uid="uid://dam223tnnmi0k" path="res://Nodes/player.tscn" id="1_7qyhe"]
+[ext_resource type="Texture2D" uid="uid://bs53pkhhkexxs" path="res://zPetitAngePartitTropTot/Assets/Salle/mur.png" id="2_1sou5"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_qth5d"]
+size = Vector2(1000, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uu41c"]
+size = Vector2(999.5, 150)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_peqc8"]
+texture = ExtResource("2_1sou5")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_o1wce"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_peqc8")
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_7qyhe")]
+position = Vector2(578, 322)
+
+[node name="CollisionShape2D" type="StaticBody2D" parent="."]
+position = Vector2(2036, -443)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D"]
+modulate = Color(1, 0.752941, 1, 1)
+mesh = SubResource("QuadMesh_qth5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_uu41c")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_o1wce")
+format = 2
+layer_0/tile_data = PackedInt32Array(589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 524292, 0, 0, 524293, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589840, 0, 0, 589841, 0, 0, 524299, 0, 0, 524298, 0, 0, 524297, 0, 0, 524296, 0, 0, 524295, 0, 0, 524294, 0, 0, 589828, 0, 0, 524291, 0, 0, 524290, 0, 0, 524289, 0, 0, 524288, 0, 0, 524303, 0, 0, 393234, 0, 0, 131103, 0, 0, 65568, 0, 0, 524301, 0, 0, 524302, 0, 0, 589838, 0, 0, 589839, 0, 0, 524304, 0, 0, 524305, 0, 0, 458769, 0, 0, 393235, 0, 0, 327700, 0, 0, 262164, 0, 0, 327699, 0, 0, 262165, 0, 0, 327702, 0, 0, 262166, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 327705, 0, 0, 327704, 0, 0, 262170, 0, 0, 262171, 0, 0, 196635, 0, 0, 196636, 0, 0, 196637, 0, 0, 131101, 0, 0, 131102, 0, 0, 65567, 0, 0, 32, 0, 0, 524300, 0, 0, 458770, 0, 0, 524306, 0, 0, 524307, 0, 0, 458771, 0, 0, 458772, 0, 0, 524308, 0, 0, 458773, 0, 0, 393237, 0, 0, 327701, 0, 0, 393236, 0, 0, 589843, 0, 0, 589842, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 524312, 0, 0, 458776, 0, 0, 458775, 0, 0, 458774, 0, 0, 524310, 0, 0, 524311, 0, 0, 524309, 0, 0, 524313, 0, 0, 458777, 0, 0, 393241, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 524320, 0, 0, 458784, 0, 0, 393248, 0, 0, 327712, 0, 0, 262176, 0, 0, 196640, 0, 0, 131104, 0, 0, 196639, 0, 0, 262175, 0, 0, 262174, 0, 0, 262173, 0, 0, 327709, 0, 0, 327708, 0, 0, 327707, 0, 0, 393243, 0, 0, 393242, 0, 0, 458778, 0, 0, 327706, 0, 0, 262172, 0, 0, 196638, 0, 0, 327710, 0, 0, 393245, 0, 0, 393244, 0, 0, 458779, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 458783, 0, 0, 393247, 0, 0, 327711, 0, 0, 393246, 0, 0, 458782, 0, 0, 458781, 0, 0, 458780, 0, 0, 655392, 0, 0, 720928, 0, 0, 786464, 0, 0, 852000, 0, 0, 917536, 0, 0, 983072, 0, 0, 1048608, 0, 0, 1114144, 0, 0, 1179680, 0, 0, 1245216, 0, 0, 1310752, 0, 0, 1310753, 0, 0, 1310754, 0, 0, 1310755, 0, 0, 1310756, 0, 0, 1310757, 0, 0, 1310758, 0, 0, 1245222, 0, 0, 1179686, 0, 0, 1114150, 0, 0, 1048614, 0, 0, 983078, 0, 0)

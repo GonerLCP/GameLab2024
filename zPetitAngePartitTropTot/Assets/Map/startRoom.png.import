@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqe4g12fwmxd5"
-path="res://.godot/imported/sky_background_by_ombobon-d8z7oby.jpg-70105fdb7eee794c34c2d3c099d8e1da.ctex"
+uid="uid://553tri5d5xdo"
+path="res://.godot/imported/startRoom.png-1413ef4cbc38be777c73f11388b0d95e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sky_background_by_ombobon-d8z7oby.jpg"
-dest_files=["res://.godot/imported/sky_background_by_ombobon-d8z7oby.jpg-70105fdb7eee794c34c2d3c099d8e1da.ctex"]
+source_file="res://zPetitAngePartitTropTot/Assets/Map/startRoom.png"
+dest_files=["res://.godot/imported/startRoom.png-1413ef4cbc38be777c73f11388b0d95e.ctex"]
 
 [params]
 

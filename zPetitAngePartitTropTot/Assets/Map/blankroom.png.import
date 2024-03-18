@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ethgo1kgall"
-path="res://.godot/imported/porte.png-e0ac4a111e20f34697b6dda77aa64e02.ctex"
+uid="uid://cv5xmo681mwsy"
+path="res://.godot/imported/blankroom.png-0bd201e7bb4206b06491ab58084f16d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Salle/porte.png"
-dest_files=["res://.godot/imported/porte.png-e0ac4a111e20f34697b6dda77aa64e02.ctex"]
+source_file="res://zPetitAngePartitTropTot/Assets/Map/blankroom.png"
+dest_files=["res://.godot/imported/blankroom.png-0bd201e7bb4206b06491ab58084f16d8.ctex"]
 
 [params]
 

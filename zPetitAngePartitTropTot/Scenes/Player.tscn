@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://btefahmksrsjs"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerMove.gd" id="1_ttwlg"]
+[ext_resource type="Script" path="res://zPetitAngePartitTropTot/Scripts/PlayerMove.gd" id="1_ttwlg"]
 [ext_resource type="Texture2D" uid="uid://ckwldj388wihx" path="res://icon.svg" id="2_6woh6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rw5ru"]
