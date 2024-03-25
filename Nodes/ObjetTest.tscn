@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgd2ex3qljd8r"]
+
+[ext_resource type="Texture2D" uid="uid://b1ethgo1kgall" path="res://zPetitAngePartitTropTot/Assets/Salle/porte.png" id="1_x4hmj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gnkx"]
+size = Vector2(64, 64)
+
+[node name="ObjetTest" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2gnkx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x4hmj")
