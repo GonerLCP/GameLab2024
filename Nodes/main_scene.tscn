@@ -1,16 +1,16 @@
-[gd_scene load_steps=24 format=3 uid="uid://26okc2klh1lh"]
+[gd_scene load_steps=12 format=3 uid="uid://26okc2klh1lh"]
 
 [ext_resource type="PackedScene" uid="uid://dam223tnnmi0k" path="res://Nodes/player.tscn" id="1_7qyhe"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_gqotu"]
 [ext_resource type="Texture2D" uid="uid://bs53pkhhkexxs" path="res://zPetitAngePartitTropTot/Assets/Salle/mur.png" id="2_1sou5"]
+[ext_resource type="Script" path="res://Nodes/Camera2D.gd" id="2_v0q0v"]
 [ext_resource type="PackedScene" uid="uid://cgd2ex3qljd8r" path="res://Nodes/ObjetTest.tscn" id="3_hhs2i"]
 [ext_resource type="PackedScene" uid="uid://cmu3j2r6kjcvu" path="res://Nodes/ui.tscn" id="4_6vvji"]
-[ext_resource type="Texture2D" uid="uid://bdp1ip1lqlacf" path="res://Assetts/Tiles/Sol 1 (90px).png" id="6_ulilb"]
-[ext_resource type="Texture2D" uid="uid://dfla3ovg8uey5" path="res://Assetts/Tiles/Mur 1 (90px).png" id="7_qcq12"]
-[ext_resource type="Texture2D" uid="uid://v3rgbjwokcl7" path="res://Assetts/Tiles/Arches/Arche 1  (droit).png" id="8_m3qew"]
-[ext_resource type="Texture2D" uid="uid://bhqn8muk56lsp" path="res://Assetts/Tiles/Arches/Arche 1 (gauche).png" id="9_bq5su"]
-[ext_resource type="Texture2D" uid="uid://b3xy8jfajxjkc" path="res://Assetts/Tiles/Sol2 (135px).png" id="10_t2q5e"]
-[ext_resource type="Texture2D" uid="uid://cpdwhdjct4ga3" path="res://Assetts/Tiles/Mur2 (135px).png" id="11_88h2l"]
+[ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Nodes/tilesetDeFou.tres" id="6_02xjf"]
+[ext_resource type="PackedScene" uid="uid://d24tw7ja7hpnc" path="res://Nodes/SecondScene.tscn" id="7_khy2j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_il3ef"]
+size = Vector2(1169, 717)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_peqc8"]
 texture = ExtResource("2_1sou5")
@@ -22,105 +22,28 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_o1wce"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 0
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_peqc8")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8fwhp"]
-texture = ExtResource("6_ulilb")
-texture_region_size = Vector2i(90, 90)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1oray"]
-texture = ExtResource("7_qcq12")
-texture_region_size = Vector2i(90, 90)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k70vp"]
-texture = ExtResource("8_m3qew")
-texture_region_size = Vector2i(90, 90)
-0:0/size_in_atlas = Vector2i(5, 7)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bhddg"]
-texture = ExtResource("9_bq5su")
-texture_region_size = Vector2i(90, 90)
-0:0/0 = 0
-0:1/0 = 0
-0:2/0 = 0
-0:3/0 = 0
-0:4/0 = 0
-0:5/0 = 0
-0:6/0 = 0
-1:0/0 = 0
-1:1/0 = 0
-1:2/0 = 0
-1:3/0 = 0
-1:4/0 = 0
-1:5/0 = 0
-1:6/0 = 0
-2:0/0 = 0
-2:1/0 = 0
-2:2/0 = 0
-2:3/0 = 0
-2:4/0 = 0
-2:5/0 = 0
-2:6/0 = 0
-3:0/0 = 0
-3:1/0 = 0
-3:2/0 = 0
-3:3/0 = 0
-3:4/0 = 0
-3:5/0 = 0
-3:6/0 = 0
-4:0/0 = 0
-4:1/0 = 0
-4:2/0 = 0
-4:3/0 = 0
-4:4/0 = 0
-4:5/0 = 0
-4:6/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_l474a"]
-tile_size = Vector2i(90, 90)
-sources/0 = SubResource("TileSetAtlasSource_8fwhp")
-sources/1 = SubResource("TileSetAtlasSource_1oray")
-sources/2 = SubResource("TileSetAtlasSource_k70vp")
-sources/3 = SubResource("TileSetAtlasSource_bhddg")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ki5gm"]
-texture = ExtResource("10_t2q5e")
-texture_region_size = Vector2i(135, 135)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wky6"]
-texture = ExtResource("11_88h2l")
-texture_region_size = Vector2i(135, 135)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a26u2"]
-texture = ExtResource("8_m3qew")
-texture_region_size = Vector2i(135, 135)
-0:0/size_in_atlas = Vector2i(3, 3)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8r7gs"]
-texture = ExtResource("9_bq5su")
-texture_region_size = Vector2i(135, 135)
-0:0/size_in_atlas = Vector2i(3, 3)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_bsm2w"]
-tile_size = Vector2i(135, 135)
-sources/3 = SubResource("TileSetAtlasSource_ki5gm")
-sources/4 = SubResource("TileSetAtlasSource_4wky6")
-sources/5 = SubResource("TileSetAtlasSource_a26u2")
-sources/6 = SubResource("TileSetAtlasSource_8r7gs")
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_gqotu")
 
-[node name="Camera2D2" type="Camera2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(584.5, 358.5)
+shape = SubResource("RectangleShape2D_il3ef")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 322)
 process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1170
+limit_bottom = 720
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
@@ -128,33 +51,41 @@ drag_left_margin = 0.4
 drag_top_margin = 0.4
 drag_right_margin = 0.4
 drag_bottom_margin = 0.4
+editor_draw_limits = true
+script = ExtResource("2_v0q0v")
 
 [node name="Player" parent="." instance=ExtResource("1_7qyhe")]
 position = Vector2(578, 322)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D2")
+remote_path = NodePath("../../Camera2D")
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 tile_set = SubResource("TileSet_o1wce")
 format = 2
-layer_0/tile_data = PackedInt32Array(589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 524292, 0, 0, 524293, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589840, 0, 0, 589841, 0, 0, 524299, 0, 0, 524298, 0, 0, 524297, 0, 0, 524296, 0, 0, 524295, 0, 0, 524294, 0, 0, 589828, 0, 0, 524291, 0, 0, 524290, 0, 0, 524289, 0, 0, 524288, 0, 0, 524303, 0, 0, 393234, 0, 0, 131103, 0, 0, 65568, 0, 0, 524301, 0, 0, 524302, 0, 0, 589838, 0, 0, 589839, 0, 0, 524304, 0, 0, 524305, 0, 0, 458769, 0, 0, 393235, 0, 0, 327700, 0, 0, 262164, 0, 0, 327699, 0, 0, 262165, 0, 0, 327702, 0, 0, 262166, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 327705, 0, 0, 327704, 0, 0, 262170, 0, 0, 262171, 0, 0, 196635, 0, 0, 196636, 0, 0, 196637, 0, 0, 131101, 0, 0, 131102, 0, 0, 65567, 0, 0, 32, 0, 0, 524300, 0, 0, 458770, 0, 0, 524306, 0, 0, 524307, 0, 0, 458771, 0, 0, 458772, 0, 0, 524308, 0, 0, 458773, 0, 0, 393237, 0, 0, 327701, 0, 0, 393236, 0, 0, 589843, 0, 0, 589842, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 524312, 0, 0, 458776, 0, 0, 458775, 0, 0, 458774, 0, 0, 524310, 0, 0, 524311, 0, 0, 524309, 0, 0, 524313, 0, 0, 458777, 0, 0, 393241, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 524320, 0, 0, 458784, 0, 0, 393248, 0, 0, 327712, 0, 0, 262176, 0, 0, 196640, 0, 0, 131104, 0, 0, 196639, 0, 0, 262175, 0, 0, 262174, 0, 0, 262173, 0, 0, 327709, 0, 0, 327708, 0, 0, 327707, 0, 0, 393243, 0, 0, 393242, 0, 0, 458778, 0, 0, 327706, 0, 0, 262172, 0, 0, 196638, 0, 0, 327710, 0, 0, 393245, 0, 0, 393244, 0, 0, 458779, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 458783, 0, 0, 393247, 0, 0, 327711, 0, 0, 393246, 0, 0, 458782, 0, 0, 458781, 0, 0, 458780, 0, 0, 655392, 0, 0, 720928, 0, 0, 786464, 0, 0, 852000, 0, 0, 917536, 0, 0, 983072, 0, 0, 1048608, 0, 0, 1114144, 0, 0, 1179680, 0, 0, 1245216, 0, 0, 1310752, 0, 0, 1310753, 0, 0, 1310754, 0, 0, 1310755, 0, 0, 1310756, 0, 0, 1310757, 0, 0, 1310758, 0, 0, 1245222, 0, 0, 1179686, 0, 0, 1114150, 0, 0, 1048614, 0, 0, 983078, 0, 0)
+layer_0/tile_data = PackedInt32Array(589841, 0, 0, 393234, 0, 0, 131103, 0, 0, 65568, 0, 0, 458769, 0, 0, 393235, 0, 0, 327700, 0, 0, 262164, 0, 0, 327699, 0, 0, 262165, 0, 0, 327702, 0, 0, 262166, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 327705, 0, 0, 327704, 0, 0, 262170, 0, 0, 262171, 0, 0, 196635, 0, 0, 196636, 0, 0, 196637, 0, 0, 131101, 0, 0, 131102, 0, 0, 65567, 0, 0, 32, 0, 0, 458770, 0, 0, 524306, 0, 0, 524307, 0, 0, 458771, 0, 0, 458772, 0, 0, 524308, 0, 0, 458773, 0, 0, 393237, 0, 0, 327701, 0, 0, 393236, 0, 0, 589843, 0, 0, 589842, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 524312, 0, 0, 458776, 0, 0, 458775, 0, 0, 458774, 0, 0, 524310, 0, 0, 524311, 0, 0, 524309, 0, 0, 524313, 0, 0, 458777, 0, 0, 393241, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 524320, 0, 0, 458784, 0, 0, 393248, 0, 0, 327712, 0, 0, 262176, 0, 0, 196640, 0, 0, 131104, 0, 0, 196639, 0, 0, 262175, 0, 0, 262174, 0, 0, 262173, 0, 0, 327709, 0, 0, 327708, 0, 0, 327707, 0, 0, 393243, 0, 0, 393242, 0, 0, 458778, 0, 0, 327706, 0, 0, 262172, 0, 0, 196638, 0, 0, 327710, 0, 0, 393245, 0, 0, 393244, 0, 0, 458779, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 0, 0, 458783, 0, 0, 393247, 0, 0, 327711, 0, 0, 393246, 0, 0, 458782, 0, 0, 458781, 0, 0, 458780, 0, 0, 655392, 0, 0, 720928, 0, 0, 786464, 0, 0, 852000, 0, 0, 917536, 0, 0, 983072, 0, 0, 1048608, 0, 0, 1114144, 0, 0, 1179680, 0, 0, 1245216, 0, 0, 1310752, 0, 0, 1310753, 0, 0, 1310754, 0, 0, 1310755, 0, 0, 1310756, 0, 0, 1310757, 0, 0, 1310758, 0, 0, 1245222, 0, 0, 1179686, 0, 0, 1114150, 0, 0, 1048614, 0, 0, 983078, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 524305, 0, 0, 524304, 0, 0, 524303, 0, 0, 524302, 0, 0, 524301, 0, 0, 524300, 0, 0, 524299, 0, 0, 524298, 0, 0, 524297, 0, 0, 524296, 0, 0, 524295, 0, 0, 524294, 0, 0, 524293, 0, 0, 524292, 0, 0, 524291, 0, 0, 524290, 0, 0, 524289, 0, 0, 524288, 0, 0)
 
 [node name="UI" parent="." instance=ExtResource("4_6vvji")]
-
-[node name="TileMap3" type="TileMap" parent="."]
-visible = false
-tile_set = SubResource("TileSet_l474a")
-format = 2
-layer_0/tile_data = PackedInt32Array(196618, 2, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 196610, 3, 0)
-
-[node name="TileMap2" type="TileMap" parent="."]
-visible = false
-tile_set = SubResource("TileSet_bsm2w")
-format = 2
-layer_0/tile_data = PackedInt32Array(262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 262150, 3, 0, 262151, 3, 0, 262152, 3, 0, 65543, 5, 0, 65537, 6, 0)
 
 [node name="ObjetTest" parent="." instance=ExtResource("3_hhs2i")]
 position = Vector2(801, 455)
 
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource("6_02xjf")
+format = 2
+layer_0/tile_data = PackedInt32Array(393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 458764, 0, 0, 458763, 0, 0, 458762, 0, 0, 458761, 0, 0, 458760, 0, 0, 458759, 0, 0, 458758, 0, 0, 458757, 0, 0, 458756, 0, 0, 458755, 0, 0, 458754, 0, 0, 458753, 0, 0, 458752, 0, 0, 327680, 0, 1, 262144, 0, 1, 196608, 0, 1, 131072, 0, 1, 65536, 0, 1, 262156, 65536, 1, 196620, 65536, 1, 131084, 65536, 1, 65548, 65536, 1, 0, 0, 6, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, 9, 65536, 0, 10, 65536, 0, 11, 65536, 0, 12, 65536, 6, 393222, 0, 0)
+
+[node name="Node2D" parent="." instance=ExtResource("7_khy2j")]
+position = Vector2(1170, 0)
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+position = Vector2(584.5, 358.5)
+shape = SubResource("RectangleShape2D_il3ef")
+
 [connection signal="dissmiss_Press" from="Player" to="." method="_on_player_dissmiss_press"]
+[connection signal="moveCamera" from="Player" to="Camera2D" method="_on_player_move_camera"]

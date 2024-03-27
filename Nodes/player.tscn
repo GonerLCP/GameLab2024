@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dam223tnnmi0k"]
+[gd_scene load_steps=6 format=3 uid="uid://dam223tnnmi0k"]
 
 [ext_resource type="Texture2D" uid="uid://ckwldj388wihx" path="res://icon.svg" id="1_ro2ow"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_shhsg"]
@@ -9,6 +9,9 @@ size = Vector2(52, 98)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_be2i8"]
 size = Vector2(20, 99)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uncgu"]
+size = Vector2(54, 100)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_shhsg")
 
@@ -17,25 +20,36 @@ position = Vector2(-3.8147e-06, -49)
 scale = Vector2(0.40625, 0.765625)
 texture = ExtResource("1_ro2ow")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D_Player" type="CollisionShape2D" parent="."]
 position = Vector2(0, -49)
 shape = SubResource("RectangleShape2D_jpwut")
 
-[node name="Droite" type="Area2D" parent="."]
+[node name="DroiteInteract" type="Area2D" parent="."]
 position = Vector2(37, -49)
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Droite"]
+[node name="CollisionShape2D_Droite" type="CollisionShape2D" parent="DroiteInteract"]
 shape = SubResource("RectangleShape2D_be2i8")
 
 [node name="ListeSpawnPos" type="Node2D" parent="."]
 
 [node name="RightSpawn" type="Marker2D" parent="ListeSpawnPos"]
-position = Vector2(64, -48)
+position = Vector2(47, 0)
 
 [node name="LeftSpawn" type="Marker2D" parent="ListeSpawnPos"]
 position = Vector2(-54, -49)
 
-[connection signal="body_entered" from="Droite" to="." method="_on_droite_body_entered"]
-[connection signal="body_exited" from="Droite" to="." method="_on_droite_body_exited"]
+[node name="RoomDetector" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D_RoomDetector" type="CollisionShape2D" parent="RoomDetector"]
+position = Vector2(0, -49)
+shape = SubResource("RectangleShape2D_uncgu")
+
+[connection signal="area_entered" from="DroiteInteract" to="." method="_on_droite_area_entered"]
+[connection signal="area_exited" from="DroiteInteract" to="." method="_on_droite_area_exited"]
+[connection signal="body_entered" from="DroiteInteract" to="." method="_on_droite_body_entered"]
+[connection signal="body_exited" from="DroiteInteract" to="." method="_on_droite_body_exited"]
+[connection signal="area_entered" from="RoomDetector" to="." method="_on_room_detector_area_entered"]

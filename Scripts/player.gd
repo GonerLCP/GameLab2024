@@ -2,22 +2,22 @@ extends CharacterBody2D
 
 @export var speed = 300
 @export var gravity = 30
-@export var jump_force = 500
+@export var jump_force = 750
 
 var CurrentStaticBody : Area2D  
-var ColliderInteract : StaticBody2D
+var ColliderInteract : Area2D
 var ColliderPris
 var direction : bool
 var dirTampon : bool
 
 signal dissmiss_Press(pos1,pos2,coll1)
-
+signal moveCamera(top,left,bottom,right)
 func _ready():
 	dirTampon = false
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	CurrentStaticBody = $Droite
+	CurrentStaticBody = $DroiteInteract
 	if !is_on_floor():
 		velocity.y += gravity
 		if velocity.y >= 1000 :
@@ -54,12 +54,33 @@ func flipBox(dir) :
 		CurrentStaticBody.position.x *= -1
 	pass
 
-
-func _on_droite_body_entered(body):
-	ColliderInteract = body
+func _on_droite_area_entered(area):
+	ColliderInteract = area
 	pass # Replace with function body.
 
 
-func _on_droite_body_exited(body):
+func _on_droite_area_exited(area):
 	ColliderInteract = null
+	pass # Replace with function body.
+
+
+func _on_room_detector_area_entered(area):
+	var collision_shape = area.get_node("CollisionShape2D")
+	var size =  collision_shape.shape.extents*2
+	
+	var view_size = get_viewport_rect().size
+	if size.y < view_size.y :
+		size.y = view_size.y
+	
+	if size.x < view_size.x :
+		size.x = view_size.x
+		
+	moveCamera.emit(collision_shape.global_position.y - size.y/2,collision_shape.global_position.x - size.x/2,size.y,size.x)
+	#var cam = $Camera2D
+	#
+	#cam.limit_top = collision_shape.global_position.y - size.y/2
+	#cam.limit_left =  collision_shape.global_position.x - size.x/2
+	#
+	#cam.limit_bottom = cam.limit_top + size.y
+	#cam.limit_right = cam.limit_left + size.x
 	pass # Replace with function body.
