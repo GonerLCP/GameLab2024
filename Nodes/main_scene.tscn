@@ -2,17 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://dam223tnnmi0k" path="res://Nodes/player.tscn" id="1_7qyhe"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_gqotu"]
-[ext_resource type="Script" path="res://Nodes/Camera2D.gd" id="2_v0q0v"]
-[ext_resource type="PackedScene" uid="uid://cgd2ex3qljd8r" path="res://Nodes/ObjetTest.tscn" id="3_hhs2i"]
+[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_v0q0v"]
+[ext_resource type="PackedScene" uid="uid://cgd2ex3qljd8r" path="res://Nodes/Objets/ObjetTest.tscn" id="3_hhs2i"]
 [ext_resource type="PackedScene" uid="uid://cmu3j2r6kjcvu" path="res://Nodes/ui.tscn" id="4_6vvji"]
-[ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Nodes/tilesetDeFou.tres" id="6_02xjf"]
-[ext_resource type="PackedScene" uid="uid://d24tw7ja7hpnc" path="res://Nodes/SecondScene.tscn" id="7_khy2j"]
+[ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="6_02xjf"]
+[ext_resource type="PackedScene" uid="uid://d24tw7ja7hpnc" path="res://Nodes/Salles/SecondScene.tscn" id="7_khy2j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il3ef"]
 size = Vector2(1169, 717)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqcnp"]
-size = Vector2(1162.5, 724)
+size = Vector2(1167.5, 724)
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_gqotu")
@@ -66,7 +66,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Salle2/Area2D"]
-position = Vector2(583.75, 360)
+position = Vector2(586.25, 360)
 shape = SubResource("RectangleShape2D_sqcnp")
 
 [connection signal="dissmiss_Press" from="Player" to="." method="_on_player_dissmiss_press"]

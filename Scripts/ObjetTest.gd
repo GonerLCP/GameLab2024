@@ -24,5 +24,8 @@ func _on_input_event(viewport, event, shape_idx):
 			selected = true
 		else : 
 			selected = false
+	pass # Replace with function body.
 
+
+func _on_area_entered(area):
 	pass # Replace with function body.
