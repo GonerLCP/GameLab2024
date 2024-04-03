@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://26okc2klh1lh"]
+[gd_scene load_steps=10 format=3 uid="uid://26okc2klh1lh"]
 
 [ext_resource type="PackedScene" uid="uid://dam223tnnmi0k" path="res://Nodes/player.tscn" id="1_7qyhe"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_gqotu"]
@@ -11,11 +11,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il3ef"]
 size = Vector2(1169, 717)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqcnp"]
+size = Vector2(1162.5, 724)
+
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_gqotu")
 
 [node name="Salle1Cam" type="Area2D" parent="."]
-visible = false
 collision_layer = 256
 collision_mask = 256
 
@@ -24,7 +26,7 @@ position = Vector2(584.5, 358.5)
 shape = SubResource("RectangleShape2D_il3ef")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(578, 322)
+position = Vector2(581, 322)
 process_callback = 0
 limit_left = 0
 limit_top = 0
@@ -41,7 +43,7 @@ editor_draw_limits = true
 script = ExtResource("2_v0q0v")
 
 [node name="Player" parent="." instance=ExtResource("1_7qyhe")]
-position = Vector2(578, 322)
+position = Vector2(581, 322)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -59,14 +61,13 @@ layer_0/tile_data = PackedInt32Array(458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 4
 [node name="Salle2" parent="." instance=ExtResource("7_khy2j")]
 position = Vector2(1170, 0)
 
-[node name="Salle2Cam" type="Area2D" parent="Salle2"]
-visible = false
+[node name="Area2D" type="Area2D" parent="Salle2"]
 collision_layer = 256
 collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Salle2/Salle2Cam"]
-position = Vector2(584.5, 358.5)
-shape = SubResource("RectangleShape2D_il3ef")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Salle2/Area2D"]
+position = Vector2(583.75, 360)
+shape = SubResource("RectangleShape2D_sqcnp")
 
 [connection signal="dissmiss_Press" from="Player" to="." method="_on_player_dissmiss_press"]
 [connection signal="moveCamera" from="Player" to="Camera2D" method="_on_player_move_camera"]
