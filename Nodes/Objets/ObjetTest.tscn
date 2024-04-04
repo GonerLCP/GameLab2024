@@ -1,15 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgd2ex3qljd8r"]
+[gd_scene load_steps=5 format=3 uid="uid://cgd2ex3qljd8r"]
 
 [ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_3xcrv"]
 [ext_resource type="Texture2D" uid="uid://b1ethgo1kgall" path="res://zPetitAngePartitTropTot/Assets/Salle/porte.png" id="1_x4hmj"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_jj8t8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gnkx"]
 size = Vector2(64, 64)
 
-[node name="ObjetTest" type="Area2D"]
+[node name="ObjetTest" type="Area2D" node_paths=PackedStringArray("spe_item")]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_3xcrv")
+spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2gnkx")
@@ -17,5 +19,13 @@ shape = SubResource("RectangleShape2D_2gnkx")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_x4hmj")
 
+[node name="SpeItem" parent="." instance=ExtResource("3_jj8t8")]
+NomDeLaCle = "2emeObjet"
+numPorte = 1
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1, -24)
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="input_event" from="." to="." method="_on_input_event"]

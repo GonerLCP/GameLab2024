@@ -1,14 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://diqhyylqgg3by"]
+[gd_scene load_steps=5 format=3 uid="uid://diqhyylqgg3by"]
 
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_6d5ag"]
 [ext_resource type="Texture2D" uid="uid://bs53pkhhkexxs" path="res://zPetitAngePartitTropTot/Assets/Salle/mur.png" id="1_p30ym"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_bcylt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
 size = Vector2(64, 64)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" node_paths=PackedStringArray("spe_item")]
+script = ExtResource("1_6d5ag")
+spe_item = NodePath("SpeItem")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_p30ym")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lqorh")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_bcylt")]
+NomDeLaCle = "xCVvd"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://26okc2klh1lh"]
+[gd_scene load_steps=12 format=3 uid="uid://26okc2klh1lh"]
 
 [ext_resource type="PackedScene" uid="uid://dam223tnnmi0k" path="res://Nodes/player.tscn" id="1_7qyhe"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_gqotu"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cmu3j2r6kjcvu" path="res://Nodes/ui.tscn" id="4_6vvji"]
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="6_02xjf"]
 [ext_resource type="PackedScene" uid="uid://d24tw7ja7hpnc" path="res://Nodes/Salles/SecondScene.tscn" id="7_khy2j"]
+[ext_resource type="PackedScene" uid="uid://diqhyylqgg3by" path="res://Nodes/Objets/2emeObjet.tscn" id="8_hiy7r"]
+[ext_resource type="PackedScene" uid="uid://byrs62t86qbxn" path="res://Nodes/Porte.tscn" id="9_rh5w6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il3ef"]
 size = Vector2(1169, 717)
@@ -68,6 +70,15 @@ collision_mask = 256
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Salle2/Area2D"]
 position = Vector2(586.25, 360)
 shape = SubResource("RectangleShape2D_sqcnp")
+
+[node name="ObjetTest2" parent="." instance=ExtResource("3_hhs2i")]
+position = Vector2(928, 452)
+
+[node name="Area2D" parent="." instance=ExtResource("8_hiy7r")]
+position = Vector2(251, 417)
+
+[node name="Node2D" parent="." instance=ExtResource("9_rh5w6")]
+position = Vector2(1168, 540)
 
 [connection signal="dissmiss_Press" from="Player" to="." method="_on_player_dissmiss_press"]
 [connection signal="moveCamera" from="Player" to="Camera2D" method="_on_player_move_camera"]

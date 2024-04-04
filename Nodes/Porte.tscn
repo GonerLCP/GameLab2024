@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://byrs62t86qbxn"]
+
+[ext_resource type="Script" path="res://Scripts/Porte.gd" id="1_v76ik"]
+[ext_resource type="Texture2D" uid="uid://dk4ph4mii72j7" path="res://Assetts/Porte.png" id="2_qt3eu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihvp5"]
+size = Vector2(109, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kgt3"]
+size = Vector2(159, 130)
+
+[node name="Node2D" type="Area2D"]
+disable_mode = 1
+script = ExtResource("1_v76ik")
+numPorte = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qt3eu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.5, 0)
+shape = SubResource("RectangleShape2D_ihvp5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_2kgt3")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

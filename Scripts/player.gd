@@ -29,6 +29,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Interact") and ColliderInteract != null :
 		#print(ColliderInteract.name)
 		ColliderPris = ColliderInteract.name
+		Global.cleRecup[ColliderInteract.get_node("SpeItem").numPorte] = 1
 		$"../UI".get_child(0).set_texture(ColliderInteract.get_child(1).get_texture())
 		ColliderInteract.queue_free()
 	
