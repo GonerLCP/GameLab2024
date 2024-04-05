@@ -1,6 +1,5 @@
-[gd_scene load_steps=38 format=3 uid="uid://dam223tnnmi0k"]
+[gd_scene load_steps=37 format=3 uid="uid://dam223tnnmi0k"]
 
-[ext_resource type="Texture2D" uid="uid://ckwldj388wihx" path="res://icon.svg" id="1_ro2ow"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_shhsg"]
 [ext_resource type="Texture2D" uid="uid://cicpwmml0hv0e" path="res://Assetts/animation/0.png" id="3_kg0n5"]
 [ext_resource type="Texture2D" uid="uid://dyjxgl1gudo8j" path="res://Assetts/animation/1.png" id="4_k65lq"]
@@ -34,18 +33,12 @@
 [ext_resource type="Texture2D" uid="uid://bfsilth1fkokl" path="res://Assetts/animation/29.png" id="32_jt6uu"]
 [ext_resource type="Texture2D" uid="uid://xgll4gvpopfq" path="res://Assetts/animation/30.png" id="33_mxbc7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpwut"]
-size = Vector2(52, 98)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_be2i8"]
-size = Vector2(20, 99)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uncgu"]
-size = Vector2(54, 100)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_eqgcy"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kg0n5")
+}],
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
@@ -149,20 +142,31 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpwut"]
+size = Vector2(65, 335)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_be2i8"]
+size = Vector2(40, 272)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uncgu"]
+size = Vector2(54, 100)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_shhsg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-3.8147e-06, -49)
-scale = Vector2(0.40625, 0.765625)
-texture = ExtResource("1_ro2ow")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -113)
+scale = Vector2(0.385376, 0.385376)
+sprite_frames = SubResource("SpriteFrames_eqgcy")
+animation = &"Idle"
+frame_progress = 0.17011
 
 [node name="CollisionShape2D_Player" type="CollisionShape2D" parent="."]
-position = Vector2(0, -49)
+position = Vector2(-0.5, -167.5)
 shape = SubResource("RectangleShape2D_jpwut")
 
 [node name="DroiteInteract" type="Area2D" parent="."]
-position = Vector2(37, -49)
+position = Vector2(54, -135)
 collision_layer = 0
 collision_mask = 2
 
@@ -172,7 +176,7 @@ shape = SubResource("RectangleShape2D_be2i8")
 [node name="ListeSpawnPos" type="Node2D" parent="."]
 
 [node name="RightSpawn" type="Marker2D" parent="ListeSpawnPos"]
-position = Vector2(47, 0)
+position = Vector2(75, 0)
 
 [node name="LeftSpawn" type="Marker2D" parent="ListeSpawnPos"]
 visible = false
@@ -185,13 +189,6 @@ collision_mask = 256
 [node name="CollisionShape2D_RoomDetector" type="CollisionShape2D" parent="RoomDetector"]
 position = Vector2(0, -49)
 shape = SubResource("RectangleShape2D_uncgu")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -113)
-scale = Vector2(0.385376, 0.385376)
-sprite_frames = SubResource("SpriteFrames_eqgcy")
-animation = &"Walk"
-frame_progress = 0.500176
 
 [connection signal="area_entered" from="DroiteInteract" to="." method="_on_droite_area_entered"]
 [connection signal="area_exited" from="DroiteInteract" to="." method="_on_droite_area_exited"]

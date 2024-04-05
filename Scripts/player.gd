@@ -4,11 +4,15 @@ extends CharacterBody2D
 @export var gravity = 30
 @export var jump_force = 750
 
+@onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
+
 var CurrentStaticBody : Area2D  
 var ColliderInteract : Area2D
 var ColliderPris
 var direction : bool
 var dirTampon : bool
+var horizontal_direction : Vector2 = Vector2.ZERO
+var animationLocked : bool = false
 
 signal dissmiss_Press(pos1,pos2,coll1)
 signal moveCamera(top,left,bottom,right)
@@ -37,9 +41,9 @@ func _physics_process(delta):
 		print(ColliderPris)
 		dissmiss_Press.emit($ListeSpawnPos.get_child(0).global_position,$ListeSpawnPos.get_child(1).global_position, ColliderPris)
 		
-	var horizontal_direction = Input.get_axis("left","right")
+	horizontal_direction = Input.get_vector("left","right","up","down")
 	
-	velocity.x = 300 * horizontal_direction
+	velocity.x = 300 * horizontal_direction.x
 	
 	if velocity.x < 0 :
 		direction = true
@@ -47,12 +51,29 @@ func _physics_process(delta):
 		direction = false
 	flipBox(direction)
 	move_and_slide()
+	updateAnimation()
+	UpdateFacingDirection()
 	#print(ColliderInteract)
 
 func flipBox(dir) :
 	if dirTampon != dir :
 		dirTampon = dir
 		CurrentStaticBody.position.x *= -1
+	pass
+
+func updateAnimation() :
+	if !animationLocked :
+		if horizontal_direction.x != 0 :
+			animated_sprite.play("Walk")
+		else :
+			animated_sprite.play("Idle")
+	pass
+
+func UpdateFacingDirection() :
+	if horizontal_direction.x > 0 :
+		animated_sprite.flip_h = false
+	if horizontal_direction.x < 0 :
+		animated_sprite.flip_h = true
 	pass
 
 func _on_droite_area_entered(area):

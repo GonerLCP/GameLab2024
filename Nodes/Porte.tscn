@@ -10,6 +10,7 @@ size = Vector2(89, 180)
 size = Vector2(159, 130)
 
 [node name="Node2D" type="StaticBody2D"]
+scale = Vector2(2, 2)
 disable_mode = 1
 script = ExtResource("1_v76ik")
 numPorte = 1
