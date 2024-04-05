@@ -23,7 +23,7 @@ func _process(delta):
 	if selected and collisioned :
 		var SoiMeme = $Marker2D.global_position
 		var Lautre = test.get_node("Marker2D").global_position
-		if test.get_node("SpeItem").fortnite == self.get_node("SpeItem").fortnite :
+		if test.get_node("SpeItem").numSalle == self.get_node("SpeItem").numSalle :
 			if abs(SoiMeme.x - Lautre.x) <= 10 :
 				if abs(SoiMeme.y - Lautre.y) <= 10:
 					var ObjetACreer = load("res://Nodes/Objets/"+ self.get_node("SpeItem").NomDeLaCle + ".tscn")
