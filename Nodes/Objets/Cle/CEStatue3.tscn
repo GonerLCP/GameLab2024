@@ -14,11 +14,12 @@ script = ExtResource("1_lisg2")
 spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.82106, 0.688723)
+position = Vector2(52.9026, -174.596)
 scale = Vector2(0.275489, 0.275489)
 shape = SubResource("RectangleShape2D_lqorh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(48.0816, -175.285)
 scale = Vector2(0.275489, 0.275489)
 texture = ExtResource("2_tnuoq")
 

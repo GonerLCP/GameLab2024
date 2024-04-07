@@ -7,10 +7,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
 size = Vector2(35.7272, 285.526)
 
-[node name="CDLTige" type="Area2D"]
+[node name="CDLTige" type="Area2D" node_paths=PackedStringArray("spe_item")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_bputc")
+spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.86179, 11.5057)
@@ -25,7 +26,7 @@ position = Vector2(-64, -103)
 
 [node name="SpeItem" parent="." instance=ExtResource("3_lpqv1")]
 numSalle = 6
-NomDeLaCle = ""
+NomDeLaCle = "CDLPinceau"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

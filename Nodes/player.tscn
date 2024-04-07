@@ -152,6 +152,7 @@ size = Vector2(40, 272)
 size = Vector2(54, 100)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_shhsg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

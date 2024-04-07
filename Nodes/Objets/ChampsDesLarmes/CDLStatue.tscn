@@ -7,10 +7,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
 size = Vector2(407, 968)
 
-[node name="CDLStatue" type="Area2D"]
+[node name="CDLStatue" type="Area2D" node_paths=PackedStringArray("spe_item")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_h5s3a")
+spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4.5, 10)

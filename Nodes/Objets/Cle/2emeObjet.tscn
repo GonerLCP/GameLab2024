@@ -14,9 +14,11 @@ script = ExtResource("1_6d5ag")
 spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, -32)
 shape = SubResource("RectangleShape2D_lqorh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32, -32)
 texture = ExtResource("1_p30ym")
 
 [node name="Marker2D" type="Marker2D" parent="."]
