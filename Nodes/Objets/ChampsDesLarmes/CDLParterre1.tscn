@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1mpkcw4yu5dm"]
+
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_3ik2t"]
+[ext_resource type="Texture2D" uid="uid://8ksmynjmlc0e" path="res://Assetts/S7 - Le Champs des Larmes/ch.larmes_parterre_fleur_01.png" id="2_500ue"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_fb8bd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
+size = Vector2(278, 295)
+
+[node name="CDLParterre1" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_3ik2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, 25.5)
+shape = SubResource("RectangleShape2D_lqorh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_500ue")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_fb8bd")]
+numSalle = 10
+NomDeLaCle = ""
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

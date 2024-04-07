@@ -1,0 +1,93 @@
+[gd_scene load_steps=19 format=3 uid="uid://b54rpwvv3oy4"]
+
+[ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_47uyh"]
+[ext_resource type="PackedScene" uid="uid://d1nne8chdaqbs" path="res://Nodes/Objets/ChampsDesLarmes/CDLBuste.tscn" id="2_eacam"]
+[ext_resource type="PackedScene" uid="uid://5ex2yfm2r8rx" path="res://Nodes/Objets/ChampsDesLarmes/CDLChaise1.tscn" id="3_08a31"]
+[ext_resource type="PackedScene" uid="uid://yciyhugxwv7x" path="res://Nodes/Objets/ChampsDesLarmes/CDLChaise2.tscn" id="4_rxhdq"]
+[ext_resource type="PackedScene" uid="uid://fwcl2q07517i" path="res://Nodes/Objets/ChampsDesLarmes/CDLFontaine.tscn" id="5_git7v"]
+[ext_resource type="PackedScene" uid="uid://cow4jg7vbh5tb" path="res://Nodes/Objets/ChampsDesLarmes/CDLLarme.tscn" id="6_f6coc"]
+[ext_resource type="PackedScene" uid="uid://d1mpkcw4yu5dm" path="res://Nodes/Objets/ChampsDesLarmes/CDLParterre1.tscn" id="7_k8tsv"]
+[ext_resource type="PackedScene" uid="uid://b2xi0i3mltsjq" path="res://Nodes/Objets/ChampsDesLarmes/CDLParterre2.tscn" id="8_ysaaa"]
+[ext_resource type="PackedScene" uid="uid://wqgv7kc2o64j" path="res://Nodes/Objets/ChampsDesLarmes/CDLRonce1.tscn" id="9_0i7gb"]
+[ext_resource type="PackedScene" uid="uid://fkn6nlouej48" path="res://Nodes/Objets/ChampsDesLarmes/CDLRonce2.tscn" id="10_b6356"]
+[ext_resource type="PackedScene" uid="uid://c73myi1wdwj5l" path="res://Nodes/Objets/ChampsDesLarmes/CDLStatue.tscn" id="11_267ai"]
+[ext_resource type="PackedScene" uid="uid://yf0qee5m008" path="res://Nodes/Objets/ChampsDesLarmes/CDLTable.tscn" id="12_lohjp"]
+[ext_resource type="PackedScene" uid="uid://bh4nucwi6t60d" path="res://Nodes/Objets/ChampsDesLarmes/CDLTige.tscn" id="13_fmomj"]
+[ext_resource type="PackedScene" uid="uid://d3i5bffj8ymls" path="res://Nodes/Objets/ChampsDesLarmes/CDLVase1.tscn" id="14_vwv2l"]
+[ext_resource type="PackedScene" uid="uid://dkl5ltfl0l3yv" path="res://Nodes/Objets/ChampsDesLarmes/CDLVase2.tscn" id="15_vm7go"]
+[ext_resource type="PackedScene" uid="uid://cwssqjomfki6j" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre1.tscn" id="16_tnphi"]
+[ext_resource type="PackedScene" uid="uid://djqnr56i7hnh2" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre2.tscn" id="17_1ptum"]
+[ext_resource type="PackedScene" uid="uid://g77knxqrkovh" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre3.tscn" id="18_8g8ec"]
+
+[node name="LeChampsDesLarmes" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_47uyh")
+format = 2
+layer_0/tile_data = PackedInt32Array(720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 65537, 1, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 720926, 1, 0, 720927, 1, 0, 720928, 1, 0, 720929, 1, 0, 720930, 1, 0, 720931, 1, 0, 720932, 1, 0, 720933, 1, 0, 720934, 1, 0, 720935, 1, 0, 720936, 1, 0, 720937, 1, 0, 720938, 1, 0, 720939, 65537, 1, 720940, 1, 0, 720941, 1, 0, 720942, 1, 0, 720943, 1, 0, 720944, 1, 0, 720945, 1, 0, 720946, 1, 0, 720947, 1, 0, 720948, 1, 0, 720950, 1, 0, 720949, 1, 0, 720951, 1, 0, 720952, 1, 0, 720953, 1, 0, 720954, 1, 0, 720955, 1, 0, 720956, 1, 0, 720957, 1, 0, 720958, 1, 0, 720959, 1, 0, 720960, 1, 0, 720961, 65537, 1)
+
+[node name="CDLBuste" parent="." instance=ExtResource("2_eacam")]
+position = Vector2(1381, 655)
+scale = Vector2(0.804523, 0.804523)
+
+[node name="CDLChaise1" parent="." instance=ExtResource("3_08a31")]
+position = Vector2(2385, 881)
+scale = Vector2(0.265947, 0.265947)
+
+[node name="CDLChaise2" parent="." instance=ExtResource("4_rxhdq")]
+position = Vector2(3488, 880)
+scale = Vector2(0.268323, 0.268323)
+
+[node name="CDLFontaine" parent="." instance=ExtResource("5_git7v")]
+position = Vector2(2931, 664)
+scale = Vector2(0.376567, 0.376567)
+
+[node name="CDLLarme" parent="." instance=ExtResource("6_f6coc")]
+position = Vector2(3345, 619)
+
+[node name="CDLParterre1" parent="." instance=ExtResource("7_k8tsv")]
+position = Vector2(165, 855)
+scale = Vector2(0.763056, 0.763056)
+
+[node name="CDLParterre2" parent="." instance=ExtResource("8_ysaaa")]
+position = Vector2(4196, 868)
+scale = Vector2(0.735482, 0.735482)
+
+[node name="CDLRonce1" parent="." instance=ExtResource("9_0i7gb")]
+position = Vector2(1726, 887)
+scale = Vector2(0.471232, 0.471232)
+
+[node name="CDLRonce2" parent="." instance=ExtResource("10_b6356")]
+position = Vector2(5344, 897)
+scale = Vector2(0.622012, 0.622012)
+
+[node name="CDLStatue" parent="." instance=ExtResource("11_267ai")]
+position = Vector2(4682, 621)
+scale = Vector2(0.733781, 0.733781)
+
+[node name="CDLTable" parent="." instance=ExtResource("12_lohjp")]
+position = Vector2(982, 883)
+scale = Vector2(0.365939, 0.365939)
+
+[node name="CDLTige" parent="." instance=ExtResource("13_fmomj")]
+position = Vector2(3581, 454)
+scale = Vector2(0.686828, 0.686828)
+
+[node name="CDLVase1" parent="." instance=ExtResource("14_vwv2l")]
+position = Vector2(5571, 886)
+
+[node name="CDLVase2" parent="." instance=ExtResource("15_vm7go")]
+position = Vector2(3803, 790)
+scale = Vector2(0.625436, 0.625436)
+
+[node name="CDLArbre1" parent="." instance=ExtResource("16_tnphi")]
+position = Vector2(5070, 557)
+scale = Vector2(0.574586, 0.574586)
+
+[node name="CDLArbre2" parent="." instance=ExtResource("17_1ptum")]
+position = Vector2(611, 525)
+scale = Vector2(0.63273, 0.63273)
+
+[node name="CDLArbre3" parent="." instance=ExtResource("18_8g8ec")]
+position = Vector2(2151, 556)
+scale = Vector2(0.530247, 0.581138)

@@ -11,30 +11,32 @@ func _ready():
 	pass # Replace with function body.
 
 func followMouse() :
-	#print(position)
-	#print(get_global_mouse_position())
-	#print(global_position)
 	position = get_global_mouse_position() + mouseOffset #+ (global_position-get_global_mouse_position())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _process(delta):
 	if selected :
 		followMouse()
 	if selected and collisioned :
 		var SoiMeme = $Marker2D.global_position
 		var Lautre = test.get_node("Marker2D").global_position
-		if test.get_node("SpeItem").numSalle == self.get_node("SpeItem").numSalle :
-			if abs(SoiMeme.x - Lautre.x) <= 10 :
-				if abs(SoiMeme.y - Lautre.y) <= 10:
-					var ObjetACreer = load("res://Nodes/Objets/"+ self.get_node("SpeItem").NomDeLaCle + ".tscn")
+		print( test.get_node("SpeItem").numSalle)
+		if test.get_node("SpeItem").numSalle == self.get_node("SpeItem").numSalle and test.get_node("SpeItem").numSalle != 10 :
+			if abs(SoiMeme.x - Lautre.x) <= 20 :
+				if abs(SoiMeme.y - Lautre.y) <= 20:
+					var ObjetACreer = load("res://Nodes/Objets/Cle/"+ self.get_node("SpeItem").NomDeLaCle + ".tscn")
 					var objetTombe = ObjetACreer.instantiate()
-					objetTombe.position = self.global_position
+					objetTombe.position = self.position
+					print(objetTombe.position)
+					print(self.global_position)
 					$"..".add_child(objetTombe)
 					self.queue_free()
 					test.queue_free()
 	pass
 
 
+@warning_ignore("unused_parameter")
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT :
 		if event.pressed :
@@ -51,6 +53,7 @@ func _on_area_entered(area):
 	pass # Replace with function body.
 
 
+@warning_ignore("unused_parameter")
 func _on_area_exited(area):
 	collisioned = false
 	pass # Replace with function body.

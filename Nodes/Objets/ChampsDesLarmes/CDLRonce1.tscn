@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://wqgv7kc2o64j"]
+
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_iqmsf"]
+[ext_resource type="Texture2D" uid="uid://do4et07xyaub1" path="res://Assetts/S7 - Le Champs des Larmes/ch.larmes_ronce_01.png" id="2_qw37y"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_1foi0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
+size = Vector2(439, 406)
+
+[node name="CDLRonce1" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_iqmsf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, 12)
+shape = SubResource("RectangleShape2D_lqorh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qw37y")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_1foi0")]
+numSalle = 10
+NomDeLaCle = ""
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

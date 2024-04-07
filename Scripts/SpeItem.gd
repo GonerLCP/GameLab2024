@@ -1,7 +1,7 @@
 extends Node2D
 class_name SpeItem
 
-enum NumeroSalle {un,deux,trois,quatre,cinq,six,sept,huit,neuf,dix}
+enum NumeroSalle {un,deux,trois,quatre,cinq,six,sept,huit,neuf,dix,aucune}
 @export var numSalle : NumeroSalle
 @export var NomDeLaCle : String
 @export var numPorte : int

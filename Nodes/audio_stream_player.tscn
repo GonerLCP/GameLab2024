@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://shdqpot44lig"]
+
+[ext_resource type="AudioStream" uid="uid://3anchovlssg5" path="res://Musique/Orphée.wav" id="1_0j1yl"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_0j1yl")
+autoplay = true
