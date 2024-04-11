@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsybkweqjgxnx"]
+
+[ext_resource type="Script" path="res://Scripts/BateauBougeant.gd" id="1_51rhg"]
+
+[sub_resource type="Animation" id="Animation_wxvyo"]
+resource_name = "BateauMove"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-1.55, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_cmacf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fxh8y"]
+_data = {
+"BateauMove": SubResource("Animation_wxvyo"),
+"RESET": SubResource("Animation_cmacf")
+}
+
+[node name="BateauBougeant" type="Path2D"]
+script = ExtResource("1_51rhg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+progress = 221.0
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../AnimatableBody2D")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+scale = Vector2(0.625, 0.131836)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+light_mask = 0
+visibility_layer = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fxh8y")
+}

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_gqidx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
-size = Vector2(722, 366)
+size = Vector2(359, 181)
 
 [node name="CEBuisson1" type="Area2D" node_paths=PackedStringArray("spe_item")]
 collision_layer = 2
@@ -14,10 +14,13 @@ script = ExtResource("1_lqdp2")
 spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, -2)
+position = Vector2(-0.609653, -1.82899)
+scale = Vector2(0.609661, 0.609661)
 shape = SubResource("RectangleShape2D_lqorh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, -3.8147e-06)
+scale = Vector2(0.29557, 0.29557)
 texture = ExtResource("2_f8tvg")
 
 [node name="Marker2D" type="Marker2D" parent="."]

@@ -14,14 +14,17 @@ script = ExtResource("1_22gqk")
 spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, -29.5)
+position = Vector2(1.13246, 0.449026)
+scale = Vector2(0.391558, 0.391558)
 shape = SubResource("RectangleShape2D_lqorh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.00001, 12)
+scale = Vector2(0.391558, 0.391558)
 texture = ExtResource("2_4l1kg")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-103, -416)
+position = Vector2(-42, -150)
 
 [node name="SpeItem" parent="." instance=ExtResource("3_h0j6t")]
 numSalle = 5

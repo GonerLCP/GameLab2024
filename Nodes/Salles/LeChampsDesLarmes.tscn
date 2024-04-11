@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b54rpwvv3oy4"]
+[gd_scene load_steps=23 format=3 uid="uid://b54rpwvv3oy4"]
 
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_47uyh"]
 [ext_resource type="Texture2D" uid="uid://dog5mq55ncicx" path="res://Assetts/Fond S7 jardin corrompu.png" id="1_o4qkj"]
@@ -20,11 +20,18 @@
 [ext_resource type="PackedScene" uid="uid://djqnr56i7hnh2" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre2.tscn" id="17_1ptum"]
 [ext_resource type="PackedScene" uid="uid://g77knxqrkovh" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre3.tscn" id="18_8g8ec"]
 [ext_resource type="PackedScene" uid="uid://c2juujtnqr0xh" path="res://Nodes/Portes/CDLPorte.tscn" id="19_oxith"]
+[ext_resource type="PackedScene" uid="uid://bsybkweqjgxnx" path="res://Nodes/bateau_bougeant.tscn" id="20_chff5"]
+
+[sub_resource type="Curve2D" id="Curve2D_dihtm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -65, 105, 54.5405, -147.142, -54.5405, 147.142, 33, 369)
+}
+point_count = 2
 
 [node name="LeChampsDesLarmes" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2970, 538)
+position = Vector2(2968, 538)
 scale = Vector2(1.03125, 0.996296)
 texture = ExtResource("1_o4qkj")
 
@@ -35,86 +42,122 @@ layer_0/tile_data = PackedInt32Array(720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 7
 
 [node name="CDLBuste" parent="." instance=ExtResource("2_eacam")]
 z_index = 2
-position = Vector2(1377, 653)
-scale = Vector2(0.804523, 0.804523)
+position = Vector2(3026, 853)
+scale = Vector2(0.320926, 0.320926)
 
 [node name="CDLChaise1" parent="." instance=ExtResource("3_08a31")]
 z_index = 2
-position = Vector2(2381, 887)
+position = Vector2(2183, 883)
 scale = Vector2(0.265947, 0.265947)
 
 [node name="CDLChaise2" parent="." instance=ExtResource("4_rxhdq")]
 z_index = 2
-position = Vector2(3488, 880)
+position = Vector2(2429, 878)
 scale = Vector2(0.268323, 0.268323)
 
 [node name="CDLFontaine" parent="." instance=ExtResource("5_git7v")]
 z_index = 2
-position = Vector2(2931, 664)
+position = Vector2(4765, 662)
 scale = Vector2(0.376567, 0.376567)
-
-[node name="CDLLarme" parent="." instance=ExtResource("6_f6coc")]
-z_index = 2
-position = Vector2(3345, 619)
 
 [node name="CDLParterre1" parent="." instance=ExtResource("7_k8tsv")]
 z_index = 2
-position = Vector2(164, 858)
-scale = Vector2(0.763056, 0.763056)
+position = Vector2(1562, 900)
+scale = Vector2(0.524407, 0.524407)
 
 [node name="CDLParterre2" parent="." instance=ExtResource("8_ysaaa")]
 z_index = 2
-position = Vector2(4197, 872)
-scale = Vector2(0.735482, 0.735482)
+position = Vector2(645, 930)
+scale = Vector2(0.371026, 0.371026)
+
+[node name="CDLParterre3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("8_ysaaa")]
+z_index = 2
+position = Vector2(3693, 935)
+scale = Vector2(0.371026, 0.371026)
+spe_item = NodePath("../CDLParterre2/SpeItem")
 
 [node name="CDLRonce1" parent="." instance=ExtResource("9_0i7gb")]
 z_index = 2
-position = Vector2(1713, 890)
-scale = Vector2(0.471232, 0.471232)
+position = Vector2(2942, 915)
+scale = Vector2(0.368178, 0.368178)
 
 [node name="CDLRonce2" parent="." instance=ExtResource("10_b6356")]
 z_index = 2
-position = Vector2(5344, 897)
-scale = Vector2(0.622012, 0.622012)
+position = Vector2(1195, 916)
+scale = Vector2(0.47972, 0.47972)
+
+[node name="CDLRonce3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("10_b6356")]
+z_index = 2
+position = Vector2(3141, 937)
+scale = Vector2(0.354903, 0.354903)
+spe_item = NodePath("../CDLRonce2/SpeItem")
 
 [node name="CDLStatue" parent="." instance=ExtResource("11_267ai")]
 z_index = 2
-position = Vector2(4682, 635)
-scale = Vector2(0.733781, 0.733781)
+position = Vector2(1877, 776)
+scale = Vector2(0.430565, 0.430565)
 
 [node name="CDLTable" parent="." instance=ExtResource("12_lohjp")]
 z_index = 2
-position = Vector2(978, 889)
-scale = Vector2(0.365939, 0.365939)
+position = Vector2(2309, 898)
+scale = Vector2(0.32609, 0.32609)
 
 [node name="CDLTige" parent="." instance=ExtResource("13_fmomj")]
 z_index = 2
-position = Vector2(3581, 454)
-scale = Vector2(0.686828, 0.686828)
+position = Vector2(2281, 685)
+scale = Vector2(0.419241, 0.419241)
 
 [node name="CDLVase1" parent="." instance=ExtResource("14_vwv2l")]
 z_index = 2
-position = Vector2(5569, 892)
+position = Vector2(2309, 777)
+scale = Vector2(0.514395, 0.514395)
 
 [node name="CDLVase2" parent="." instance=ExtResource("15_vm7go")]
 z_index = 2
-position = Vector2(3804, 794)
-scale = Vector2(0.625436, 0.625436)
+position = Vector2(522, 875)
+scale = Vector2(0.368354, 0.368354)
+
+[node name="CDLVase3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("15_vm7go")]
+z_index = 2
+position = Vector2(123, 874)
+scale = Vector2(0.368354, 0.368354)
+spe_item = NodePath("../CDLVase2/SpeItem")
 
 [node name="CDLArbre1" parent="." instance=ExtResource("16_tnphi")]
 z_index = 2
-position = Vector2(5070, 557)
-scale = Vector2(0.574586, 0.574586)
+position = Vector2(2736, 666)
+scale = Vector2(0.432745, 0.432745)
+
+[node name="CDLArbre5" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("16_tnphi")]
+z_index = 2
+position = Vector2(4084, 663)
+scale = Vector2(0.432745, 0.432745)
+spe_item = NodePath("../CDLArbre1/SpeItem")
 
 [node name="CDLArbre2" parent="." instance=ExtResource("17_1ptum")]
 z_index = 2
-position = Vector2(617, 537)
-scale = Vector2(0.63273, 0.63273)
+position = Vector2(1420, 702)
+scale = Vector2(0.406195, 0.406195)
 
 [node name="CDLArbre3" parent="." instance=ExtResource("18_8g8ec")]
 z_index = 2
-position = Vector2(2151, 567)
-scale = Vector2(0.530247, 0.581138)
+position = Vector2(1014, 660)
+scale = Vector2(0.418679, 0.449091)
+
+[node name="CDLArbre4" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("18_8g8ec")]
+z_index = 2
+position = Vector2(3345, 665)
+scale = Vector2(0.418679, 0.449091)
+spe_item = NodePath("../CDLArbre3/SpeItem")
+
+[node name="CDLLarme" parent="." node_paths=PackedStringArray("path") instance=ExtResource("6_f6coc")]
+position = Vector2(5157, 579)
+path = NodePath("../BateauBougeant")
 
 [node name="CDLPorte" parent="." instance=ExtResource("19_oxith")]
-position = Vector2(5838, 812)
+position = Vector2(319, 305)
+scale = Vector2(2.54432, 2.54432)
+
+[node name="BateauBougeant" parent="." instance=ExtResource("20_chff5")]
+position = Vector2(4931, 401)
+curve = SubResource("Curve2D_dihtm")
