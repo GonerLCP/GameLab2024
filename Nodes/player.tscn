@@ -1,7 +1,8 @@
-[gd_scene load_steps=37 format=3 uid="uid://dam223tnnmi0k"]
+[gd_scene load_steps=71 format=3 uid="uid://dam223tnnmi0k"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_shhsg"]
 [ext_resource type="Texture2D" uid="uid://cicpwmml0hv0e" path="res://Assetts/animation/0.png" id="3_kg0n5"]
+[ext_resource type="Texture2D" uid="uid://dih1r3r2mfmiw" path="res://Assetts/animation/Saut2.png" id="3_ncu3t"]
 [ext_resource type="Texture2D" uid="uid://dyjxgl1gudo8j" path="res://Assetts/animation/1.png" id="4_k65lq"]
 [ext_resource type="Texture2D" uid="uid://cov8arkdq0p4m" path="res://Assetts/animation/2.png" id="5_23y7f"]
 [ext_resource type="Texture2D" uid="uid://t1mekjgvrhq8" path="res://Assetts/animation/3.png" id="6_nyrkg"]
@@ -32,6 +33,39 @@
 [ext_resource type="Texture2D" uid="uid://smbk73f2ypu0" path="res://Assetts/animation/28.png" id="31_mo3gl"]
 [ext_resource type="Texture2D" uid="uid://bfsilth1fkokl" path="res://Assetts/animation/29.png" id="32_jt6uu"]
 [ext_resource type="Texture2D" uid="uid://xgll4gvpopfq" path="res://Assetts/animation/30.png" id="33_mxbc7"]
+[ext_resource type="Texture2D" uid="uid://y1c1weehxh8t" path="res://Assetts/Marche2/animation/0.png" id="34_0yoyk"]
+[ext_resource type="Texture2D" uid="uid://1j2lvwmxic1l" path="res://Assetts/Marche2/animation/1.png" id="35_n2a3x"]
+[ext_resource type="Texture2D" uid="uid://bk5fr2ppf5nxw" path="res://Assetts/Marche2/animation/3.png" id="36_pef1b"]
+[ext_resource type="Texture2D" uid="uid://baebghsrm315f" path="res://Assetts/Marche2/animation/4.png" id="37_8m1wp"]
+[ext_resource type="Texture2D" uid="uid://bvswlwthh2n6a" path="res://Assetts/Marche2/animation/5.png" id="38_e2iky"]
+[ext_resource type="Texture2D" uid="uid://2sqe5ovp0j55" path="res://Assetts/Marche2/animation/6.png" id="39_wagwt"]
+[ext_resource type="Texture2D" uid="uid://darc4n2egix3c" path="res://Assetts/Marche2/animation/7.png" id="40_r4u4u"]
+[ext_resource type="Texture2D" uid="uid://sdog2eayhlsm" path="res://Assetts/Marche2/animation/8.png" id="41_4gp6o"]
+[ext_resource type="Texture2D" uid="uid://dlmk6p1mfu4bw" path="res://Assetts/Marche2/animation/9.png" id="42_glp2q"]
+[ext_resource type="Texture2D" uid="uid://clc7u1mkjn281" path="res://Assetts/Marche2/animation/10.png" id="43_f2ppv"]
+[ext_resource type="Texture2D" uid="uid://c3icnbkbn7l61" path="res://Assetts/Marche2/animation/11.png" id="44_5t1my"]
+[ext_resource type="Texture2D" uid="uid://bl8ju66gvvr46" path="res://Assetts/Marche2/animation/12.png" id="45_ecxqq"]
+[ext_resource type="Texture2D" uid="uid://cajxudfvqmq7n" path="res://Assetts/Marche2/animation/13.png" id="46_tokay"]
+[ext_resource type="Texture2D" uid="uid://cxxqu0wvb82r4" path="res://Assetts/Marche2/animation/14.png" id="47_tx65q"]
+[ext_resource type="Texture2D" uid="uid://btirdo6tt6yjx" path="res://Assetts/Marche2/animation/15.png" id="48_4iw51"]
+[ext_resource type="Texture2D" uid="uid://dc71kdagsxf28" path="res://Assetts/Marche2/animation/16.png" id="49_yl54a"]
+[ext_resource type="Texture2D" uid="uid://gbu2bybqvo1d" path="res://Assetts/Marche2/animation/17.png" id="50_hheyg"]
+[ext_resource type="Texture2D" uid="uid://dwml27yply82n" path="res://Assetts/Marche2/animation/18.png" id="51_p7bwm"]
+[ext_resource type="Texture2D" uid="uid://cxgp53fxgr0p6" path="res://Assetts/Marche2/animation/19.png" id="52_2d1wb"]
+[ext_resource type="Texture2D" uid="uid://bpg6j6xlmbvxo" path="res://Assetts/Marche2/animation/20.png" id="53_6tdam"]
+[ext_resource type="Texture2D" uid="uid://c6ro4g8td5b4n" path="res://Assetts/Marche2/animation/21.png" id="54_13poh"]
+[ext_resource type="Texture2D" uid="uid://cls7eyijnhvvr" path="res://Assetts/Marche2/animation/22.png" id="55_ori0h"]
+[ext_resource type="Texture2D" uid="uid://5k4m8vxxewok" path="res://Assetts/Marche2/animation/23.png" id="56_q2jvq"]
+[ext_resource type="Texture2D" uid="uid://duox2dejv4yu6" path="res://Assetts/Marche2/animation/24.png" id="57_nrakl"]
+[ext_resource type="Texture2D" uid="uid://cjnwjye3t63cx" path="res://Assetts/Marche2/animation/25.png" id="58_ssybe"]
+[ext_resource type="Texture2D" uid="uid://dd7w8wglrl1ap" path="res://Assetts/Marche2/animation/26.png" id="59_ydu4l"]
+[ext_resource type="Texture2D" uid="uid://y8hfjvgne142" path="res://Assetts/Marche2/animation/27.png" id="60_4f8u2"]
+[ext_resource type="Texture2D" uid="uid://bk8bfr33f46rm" path="res://Assetts/Marche2/animation/28.png" id="61_5fr05"]
+[ext_resource type="Texture2D" uid="uid://cwd6xsf668xm" path="res://Assetts/Marche2/animation/29.png" id="62_gyrij"]
+[ext_resource type="Texture2D" uid="uid://d2tnhvvqs4xqu" path="res://Assetts/Marche2/animation/30.png" id="63_rl55e"]
+[ext_resource type="Texture2D" uid="uid://dlangb7rxq11u" path="res://Assetts/Marche2/animation/31.png" id="64_3weoo"]
+[ext_resource type="Texture2D" uid="uid://emyox3lywl7l" path="res://Assetts/Marche2/animation/32.png" id="65_ewjte"]
+[ext_resource type="Texture2D" uid="uid://bg0ococh2r3ah" path="res://Assetts/Marche2/animation/33.png" id="66_7he4c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eqgcy"]
 animations = [{
@@ -41,6 +75,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ncu3t")
+}],
+"loop": true,
+"name": &"Jump",
 "speed": 5.0
 }, {
 "frames": [{
@@ -140,6 +182,110 @@ animations = [{
 "loop": true,
 "name": &"Walk",
 "speed": 22.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_0yoyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_n2a3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pef1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_8m1wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_e2iky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_wagwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_r4u4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4gp6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_glp2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_f2ppv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5t1my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ecxqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_tokay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_tx65q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_4iw51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_yl54a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_hheyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_p7bwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_2d1wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_6tdam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_13poh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ori0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_q2jvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_nrakl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ssybe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ydu4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_4f8u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_5fr05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_gyrij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_rl55e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3weoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ewjte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_7he4c")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 22.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpwut"]
@@ -159,8 +305,7 @@ script = ExtResource("1_shhsg")
 position = Vector2(1, -113)
 scale = Vector2(0.385376, 0.385376)
 sprite_frames = SubResource("SpriteFrames_eqgcy")
-animation = &"Walk"
-frame_progress = 0.691388
+animation = &"new_animation"
 
 [node name="CollisionShape2D_Player" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -168)
@@ -191,8 +336,15 @@ collision_mask = 256
 position = Vector2(0, -49)
 shape = SubResource("RectangleShape2D_uncgu")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="area_entered" from="DroiteInteract" to="." method="_on_droite_area_entered"]
 [connection signal="area_exited" from="DroiteInteract" to="." method="_on_droite_area_exited"]
 [connection signal="body_entered" from="DroiteInteract" to="." method="_on_droite_body_entered"]
 [connection signal="body_exited" from="DroiteInteract" to="." method="_on_droite_body_exited"]
 [connection signal="area_entered" from="RoomDetector" to="." method="_on_room_detector_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp5sxxjaitg2v"]
+
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_pk0dr"]
+[ext_resource type="Texture2D" uid="uid://dr520us87o2v6" path="res://Assetts/S8 - Atelier/LampeSoleil2.png" id="2_6vmnu"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_pv2qr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ocojp"]
+radius = 327.098
+
+[node name="ATLampeSoleil2" type="Area2D" node_paths=PackedStringArray("spe_item")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_pk0dr")
+spe_item = NodePath("SpeItem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -55)
+shape = SubResource("CircleShape2D_ocojp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6vmnu")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_pv2qr")]
+numSalle = 10
+NomDeLaCle = ""
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

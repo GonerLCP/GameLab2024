@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://jeiksql76hv7"]
+
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_inqc7"]
+[ext_resource type="Texture2D" uid="uid://cd706m431vyo6" path="res://Assetts/S8 - Atelier/toile 2.png" id="2_33710"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_hv1qk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
+size = Vector2(292, 394)
+
+[node name="ATToile2" type="Area2D" node_paths=PackedStringArray("spe_item")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_inqc7")
+spe_item = NodePath("SpeItem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 2)
+shape = SubResource("RectangleShape2D_lqorh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_33710")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_hv1qk")]
+numSalle = 10
+NomDeLaCle = ""
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

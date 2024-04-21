@@ -20,8 +20,9 @@ shape = SubResource("RectangleShape2D_2gnkx")
 texture = ExtResource("1_x4hmj")
 
 [node name="SpeItem" parent="." instance=ExtResource("3_jj8t8")]
+numSalle = 4
 NomDeLaCle = "2emeObjet"
-numPorte = 1
+numPorte = 6
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1, -24)

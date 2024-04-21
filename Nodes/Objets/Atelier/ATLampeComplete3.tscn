@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bevhytsr8jvmf"]
+
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_a5hcb"]
+[ext_resource type="Texture2D" uid="uid://cwysbvdordw3i" path="res://Assetts/S8 - Atelier/LampeComplete3.png" id="2_14qum"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_6cfdd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fcmj"]
+radius = 358.089
+
+[node name="ATLampeComplete3" type="Area2D" node_paths=PackedStringArray("spe_item")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_a5hcb")
+spe_item = NodePath("SpeItem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_3fcmj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_14qum")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_6cfdd")]
+numSalle = 10
+NomDeLaCle = ""
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

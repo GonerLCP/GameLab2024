@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://l5oce220nofn"]
+[gd_scene load_steps=5 format=3 uid="uid://c2juujtnqr0xh"]
 
 [ext_resource type="Script" path="res://Scripts/Porte.gd" id="1_n06gf"]
-[ext_resource type="Texture2D" uid="uid://cyomxwvsuhjan" path="res://Assetts/S6 - Les Champs Elysées/porteS4.png" id="2_dej0k"]
+[ext_resource type="Texture2D" uid="uid://ds3p806w01upb" path="res://Assetts/PortesOuvertes/S6_Champs_Elysees_Porte.png" id="2_gip3n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihvp5"]
 size = Vector2(89, 180)
@@ -9,16 +9,17 @@ size = Vector2(89, 180)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kgt3"]
 size = Vector2(159, 130)
 
-[node name="Node2D" type="StaticBody2D"]
+[node name="CEPorte" type="StaticBody2D"]
 scale = Vector2(2, 2)
 disable_mode = 1
 script = ExtResource("1_n06gf")
 numPorte = 6
+nomSpriteOuvert = "S6_Champs_Elysees_Porte_Open.png"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.5, -13.5)
-scale = Vector2(0.133844, 0.133844)
-texture = ExtResource("2_dej0k")
+position = Vector2(-2, -13.5)
+scale = Vector2(0.313275, 0.313275)
+texture = ExtResource("2_gip3n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

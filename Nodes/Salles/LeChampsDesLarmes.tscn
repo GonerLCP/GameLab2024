@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://b54rpwvv3oy4"]
 
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_47uyh"]
-[ext_resource type="Texture2D" uid="uid://dog5mq55ncicx" path="res://Assetts/Fond S7 jardin corrompu.png" id="1_o4qkj"]
+[ext_resource type="Texture2D" uid="uid://dog5mq55ncicx" path="res://Assetts/vrac/Fond S7 jardin corrompu.png" id="1_o4qkj"]
 [ext_resource type="PackedScene" uid="uid://d1nne8chdaqbs" path="res://Nodes/Objets/ChampsDesLarmes/CDLBuste.tscn" id="2_eacam"]
 [ext_resource type="PackedScene" uid="uid://5ex2yfm2r8rx" path="res://Nodes/Objets/ChampsDesLarmes/CDLChaise1.tscn" id="3_08a31"]
 [ext_resource type="PackedScene" uid="uid://yciyhugxwv7x" path="res://Nodes/Objets/ChampsDesLarmes/CDLChaise2.tscn" id="4_rxhdq"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cwssqjomfki6j" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre1.tscn" id="16_tnphi"]
 [ext_resource type="PackedScene" uid="uid://djqnr56i7hnh2" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre2.tscn" id="17_1ptum"]
 [ext_resource type="PackedScene" uid="uid://g77knxqrkovh" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre3.tscn" id="18_8g8ec"]
-[ext_resource type="PackedScene" uid="uid://c2juujtnqr0xh" path="res://Nodes/Portes/CDLPorte.tscn" id="19_oxith"]
+[ext_resource type="PackedScene" uid="uid://c2juujtnqr0xh" path="res://Nodes/Portes/CEPorte.tscn" id="19_oxith"]
 [ext_resource type="PackedScene" uid="uid://bsybkweqjgxnx" path="res://Nodes/bateau_bougeant.tscn" id="20_chff5"]
 
 [sub_resource type="Curve2D" id="Curve2D_dihtm"]
@@ -155,7 +155,7 @@ position = Vector2(5157, 579)
 path = NodePath("../BateauBougeant")
 
 [node name="CDLPorte" parent="." instance=ExtResource("19_oxith")]
-position = Vector2(319, 305)
+position = Vector2(5599, 748)
 scale = Vector2(2.54432, 2.54432)
 
 [node name="BateauBougeant" parent="." instance=ExtResource("20_chff5")]

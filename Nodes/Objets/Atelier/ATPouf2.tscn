@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbwpywjm0aap8"]
+
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_syu1g"]
+[ext_resource type="Texture2D" uid="uid://cw65jv6aiaadg" path="res://Assetts/S8 - Atelier/Pouf3.png" id="2_xm0n0"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_dl54o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
+size = Vector2(422, 601)
+
+[node name="ATPouf2" type="Area2D" node_paths=PackedStringArray("spe_item")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_syu1g")
+spe_item = NodePath("SpeItem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 17.5)
+shape = SubResource("RectangleShape2D_lqorh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xm0n0")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_dl54o")]
+numSalle = 10
+NomDeLaCle = ""
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

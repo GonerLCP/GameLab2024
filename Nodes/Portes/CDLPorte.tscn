@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2juujtnqr0xh"]
+[gd_scene load_steps=5 format=3 uid="uid://dnyurgcnftapa"]
 
 [ext_resource type="Script" path="res://Scripts/Porte.gd" id="1_n06gf"]
-[ext_resource type="Texture2D" uid="uid://cb6ncpxqln53k" path="res://Assetts/S7 - Le Champs des Larmes/ch.larmes_porte_S6.png" id="2_0f2lw"]
+[ext_resource type="Texture2D" uid="uid://cfhkcmc677i0o" path="res://Assetts/S6 - Les Champs Elysées/porteS7.png" id="2_tnd2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihvp5"]
 size = Vector2(89, 180)
@@ -14,11 +14,11 @@ scale = Vector2(2, 2)
 disable_mode = 1
 script = ExtResource("1_n06gf")
 numPorte = 7
+nomSpriteOuvert = "S7Porte_Open.png"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.5, -13.5)
 scale = Vector2(0.133844, 0.133844)
-texture = ExtResource("2_0f2lw")
+texture = ExtResource("2_tnd2p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)

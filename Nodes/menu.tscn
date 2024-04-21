@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2mhbqjyjtwq5"]
+[gd_scene load_steps=4 format=3 uid="uid://c2mhbqjyjtwq5"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_0hdf6"]
-[ext_resource type="Texture2D" uid="uid://ykgy65p3ynjw" path="res://Assetts/Orphee contre les ombres.png" id="2_vc2or"]
+[ext_resource type="Texture2D" uid="uid://hjqwlenn7sgr" path="res://Assetts/vrac/Splash.png" id="2_lxmji"]
+[ext_resource type="FontFile" uid="uid://df87futj377mh" path="res://Assetts/vrac/Unbounded-Medium.ttf" id="3_ysayq"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -16,14 +17,14 @@ script = ExtResource("1_0hdf6")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_vc2or")
+texture = ExtResource("2_lxmji")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 827.0
-offset_top = 441.0
-offset_right = 897.0
-offset_bottom = 554.0
+offset_left = 147.0
+offset_top = 365.0
+offset_right = 217.0
+offset_bottom = 478.0
 scale = Vector2(3.50022, 3.50022)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
@@ -45,13 +46,16 @@ text = "Quit"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-offset_left = 464.0
-offset_top = 258.0
-offset_right = 1452.0
-offset_bottom = 341.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 60
-text = "Orphée contre les ombres"
+offset_left = -168.0
+offset_top = 210.0
+offset_right = 725.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_ysayq")
+theme_override_font_sizes/font_size = 46
+text = "Oprhée aux enfers"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bva50v1041ba2"]
+
+[ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_jxokn"]
+[ext_resource type="Texture2D" uid="uid://qy3ugvfjnkts" path="res://Assetts/S8 - Atelier/Rideau.png" id="2_ixhtx"]
+
+[node name="Atelier" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_jxokn")
+format = 2
+layer_0/tile_data = PackedInt32Array(720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(989, 536)
+scale = Vector2(1.03, 1)
+texture = ExtResource("2_ixhtx")

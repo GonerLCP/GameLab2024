@@ -5,7 +5,6 @@ extends CharacterBody2D
 @export var jump_force = 750
 
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
-
 var CurrentStaticBody : Area2D  
 var ColliderInteract : Area2D
 var ColliderPris
@@ -13,11 +12,17 @@ var direction : bool
 var dirTampon : bool
 var horizontal_direction : Vector2 = Vector2.ZERO
 var animationLocked : bool = false
+var numeroIndice =0
+
+var indice1
+var indice2
+var indice3
 
 signal dissmiss_Press(pos1,pos2,coll1)
 signal moveCamera(top,left,bottom,right)
 func _ready():
 	dirTampon = false
+	IndiceOrphee()
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -31,7 +36,6 @@ func _physics_process(delta):
 		velocity.y = -jump_force
 	
 	if Input.is_action_just_pressed("Interact") and ColliderInteract != null :
-		#print(ColliderInteract.name)
 		ColliderPris = ColliderInteract.name
 		Global.cleRecup[ColliderInteract.get_node("SpeItem").numPorte] = 1
 		$"../UI".get_child(0).set_texture(ColliderInteract.get_child(1).get_texture())
@@ -67,6 +71,8 @@ func updateAnimation() :
 			animated_sprite.play("Walk")
 		else :
 			animated_sprite.play("Idle")
+	if !is_on_floor():
+		animated_sprite.play("Jump")
 	pass
 
 func UpdateFacingDirection() :
@@ -98,11 +104,32 @@ func _on_room_detector_area_entered(area):
 		size.x = view_size.x
 		
 	moveCamera.emit(collision_shape.global_position.y - size.y/2,collision_shape.global_position.x - size.x/2,size.y,size.x)
-	#var cam = $Camera2D
-	#
-	#cam.limit_top = collision_shape.global_position.y - size.y/2
-	#cam.limit_left =  collision_shape.global_position.x - size.x/2
-	#
-	#cam.limit_bottom = cam.limit_top + size.y
-	#cam.limit_right = cam.limit_left + size.x
+	
+	indice1 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/01.mp3")
+	indice2 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/02.mp3")
+	indice3 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/03.mp3")
+	numeroIndice = 1
+	$Timer.start()
+	pass # Replace with function body.
+
+func IndiceOrphee():
+	#$AudioStreamPlayer2D.set_stream(mabite)
+	match(numeroIndice) :
+		1:
+			$AudioStreamPlayer2D.set_stream(indice1)
+		2:
+			$AudioStreamPlayer2D.set_stream(indice2)
+		3:
+			$AudioStreamPlayer2D.set_stream(indice3)
+	if numeroIndice <= 3 :
+		$AudioStreamPlayer2D.play(0.0)
+		pass
+	numeroIndice = numeroIndice + 1
+	
+	pass
+
+
+func _on_timer_timeout():
+	IndiceOrphee()
+	$Timer.set_wait_time(5.0)
 	pass # Replace with function body.

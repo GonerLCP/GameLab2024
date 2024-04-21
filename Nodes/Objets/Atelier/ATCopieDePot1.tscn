@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmpwfo5l6un6a"]
+
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_n7bkv"]
+[ext_resource type="Texture2D" uid="uid://d2twhs2odoote" path="res://Assetts/S8 - Atelier/Copie de pot.png" id="2_ifg1i"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_cdkmq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
+size = Vector2(71, 95)
+
+[node name="ATCopieDePot1" type="Area2D" node_paths=PackedStringArray("spe_item")]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_n7bkv")
+spe_item = NodePath("SpeItem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 36.5)
+shape = SubResource("RectangleShape2D_lqorh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ifg1i")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="SpeItem" parent="." instance=ExtResource("3_cdkmq")]
+numSalle = 10
+NomDeLaCle = ""
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

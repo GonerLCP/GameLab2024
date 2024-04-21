@@ -28,7 +28,7 @@ texture = ExtResource("2_tnuoq")
 [node name="SpeItem" parent="." instance=ExtResource("3_nqw4l")]
 numSalle = 10
 NomDeLaCle = ""
-numPorte = 6
+numPorte = 7
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
