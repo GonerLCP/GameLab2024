@@ -1,18 +1,27 @@
-[gd_scene load_steps=14 format=3 uid="uid://u1bkwa26jqj8"]
+[gd_scene load_steps=23 format=3 uid="uid://u1bkwa26jqj8"]
 
 [ext_resource type="Texture2D" uid="uid://cdm262tkx3x5m" path="res://Assetts/vrac/Fond S6 Jardin.png" id="1_7iskp"]
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_caxkr"]
+[ext_resource type="Texture2D" uid="uid://hi5ona6tmfcp" path="res://Assetts/S6 - Les Champs Elysées/1B5004F3-4DD6-4809-A1B9-0F5CB1C8777C.png" id="2_5h82d"]
 [ext_resource type="PackedScene" uid="uid://bywa66rwqsb7k" path="res://Nodes/Objets/ChampsElysee/CEBuisson1.tscn" id="2_8i8d1"]
 [ext_resource type="PackedScene" uid="uid://bbb1dnpj3idy5" path="res://Nodes/Objets/ChampsElysee/CEBuisson2.tscn" id="3_0ty8n"]
+[ext_resource type="Texture2D" uid="uid://brccn45tjlx8p" path="res://Assetts/S6 - Les Champs Elysées/32F8D6FD-1F3A-47BC-830C-1167274FE20C.png" id="3_louhv"]
+[ext_resource type="Texture2D" uid="uid://4cdbothksu1i" path="res://Assetts/S6 - Les Champs Elysées/142A5C79-099D-43C7-8E7B-024EBA2A82B4.png" id="4_ur82x"]
 [ext_resource type="PackedScene" uid="uid://wpjs3sybne1j" path="res://Nodes/Objets/ChampsElysee/CEColonne2.tscn" id="5_4ugta"]
 [ext_resource type="PackedScene" uid="uid://dvi020xtkvla6" path="res://Nodes/Objets/ChampsElysee/CEFontaine.tscn" id="6_x76ye"]
 [ext_resource type="PackedScene" uid="uid://cboyumrm5upp1" path="res://Nodes/Objets/ChampsElysee/CERoche1.tscn" id="7_2rw6p"]
 [ext_resource type="PackedScene" uid="uid://c0l5o7q4p8d4h" path="res://Nodes/Objets/ChampsElysee/CERoche2.tscn" id="8_adn1b"]
 [ext_resource type="PackedScene" uid="uid://dd6cf0sug2yit" path="res://Nodes/Objets/ChampsElysee/CEStatue1.tscn" id="9_hqa3p"]
-[ext_resource type="PackedScene" uid="uid://l5oce220nofn" path="res://Nodes/Portes/CEPorteffsf.tscn" id="10_aoj50"]
+[ext_resource type="PackedScene" uid="uid://l5oce220nofn" path="res://Nodes/Portes/RIPorte.tscn" id="10_aoj50"]
 [ext_resource type="PackedScene" uid="uid://c4c3nrtwjsn2d" path="res://Nodes/Objets/ChampsElysee/CEStatue2.tscn" id="10_best6"]
 [ext_resource type="PackedScene" uid="uid://cingxwfcwrttu" path="res://Nodes/Objets/Cle/CEStatue3.tscn" id="12_nnmai"]
 [ext_resource type="PackedScene" uid="uid://dnyurgcnftapa" path="res://Nodes/Portes/CDLPorte.tscn" id="13_6dv5g"]
+[ext_resource type="PackedScene" uid="uid://yveu6jpp8y8v" path="res://Nodes/Objets/ChampsElysee/CERacines1.tscn" id="17_5f3bi"]
+[ext_resource type="PackedScene" uid="uid://5kk4lnsvgsm5" path="res://Nodes/Objets/ChampsElysee/CERacines2.tscn" id="18_4vrbs"]
+[ext_resource type="PackedScene" uid="uid://ctk1knp0d8cdc" path="res://Nodes/Objets/ChampsElysee/CERacines3.tscn" id="19_mdnbw"]
+[ext_resource type="PackedScene" uid="uid://cpxt4856dwf6i" path="res://Nodes/Objets/ChampsElysee/CERacines4.tscn" id="20_oucr5"]
+[ext_resource type="PackedScene" uid="uid://boxn1irr0mqp5" path="res://Nodes/Objets/ChampsElysee/CESerpent1.tscn" id="21_ns354"]
+[ext_resource type="PackedScene" uid="uid://2xd07uye5ot5" path="res://Nodes/Objets/ChampsElysee/CESerpent2.tscn" id="22_tgrjk"]
 
 [node name="ChampsElysee" type="Node2D"]
 
@@ -20,6 +29,46 @@
 position = Vector2(2970.5, 539)
 scale = Vector2(1.03108, 1)
 texture = ExtResource("1_7iskp")
+
+[node name="1b5004f3-4dd6-4809-a1b9-0f5cb1c8777c" type="Sprite2D" parent="."]
+position = Vector2(1707, 759)
+scale = Vector2(0.28629, 0.28629)
+texture = ExtResource("2_5h82d")
+
+[node name="1b5004f3-4dd6-4809-a1b9-0f5cb1c8777c2" type="Sprite2D" parent="."]
+position = Vector2(3656, 768)
+scale = Vector2(0.28629, 0.28629)
+texture = ExtResource("2_5h82d")
+
+[node name="32f8d6fd-1f3a-47bc-830c-1167274fe20c" type="Sprite2D" parent="."]
+position = Vector2(625, 674)
+scale = Vector2(0.377016, 0.377016)
+texture = ExtResource("3_louhv")
+
+[node name="32f8d6fd-1f3a-47bc-830c-1167274fe20c3" type="Sprite2D" parent="."]
+position = Vector2(2722, 728)
+scale = Vector2(0.377016, 0.377016)
+texture = ExtResource("3_louhv")
+
+[node name="32f8d6fd-1f3a-47bc-830c-1167274fe20c2" type="Sprite2D" parent="."]
+position = Vector2(5261, 699)
+scale = Vector2(0.377016, 0.377016)
+texture = ExtResource("3_louhv")
+
+[node name="142a5c79-099d-43c7-8e7b-024eba2a82b4" type="Sprite2D" parent="."]
+position = Vector2(5687, 554)
+scale = Vector2(0.506452, 0.506452)
+texture = ExtResource("4_ur82x")
+
+[node name="142a5c79-099d-43c7-8e7b-024eba2a82b6" type="Sprite2D" parent="."]
+position = Vector2(4189, 549)
+scale = Vector2(0.506452, 0.506452)
+texture = ExtResource("4_ur82x")
+
+[node name="142a5c79-099d-43c7-8e7b-024eba2a82b5" type="Sprite2D" parent="."]
+position = Vector2(2433, 1179)
+scale = Vector2(0.506452, 0.506452)
+texture = ExtResource("4_ur82x")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_caxkr")
@@ -66,7 +115,7 @@ z_index = 2
 position = Vector2(843, 811)
 
 [node name="Porte" parent="." instance=ExtResource("10_aoj50")]
-position = Vector2(770, 113)
+position = Vector2(546, 1919)
 
 [node name="CEBuisson3" parent="." instance=ExtResource("2_8i8d1")]
 position = Vector2(2729, 916)
@@ -84,3 +133,69 @@ scale = Vector2(1.16346, 1.16346)
 
 [node name="CDLPorte" parent="." instance=ExtResource("13_6dv5g")]
 position = Vector2(5938, 808)
+
+[node name="CERacines1" parent="." instance=ExtResource("17_5f3bi")]
+position = Vector2(270, 71)
+
+[node name="CERacines2" parent="." instance=ExtResource("18_4vrbs")]
+position = Vector2(604, 67)
+
+[node name="CERacines3" parent="." instance=ExtResource("19_mdnbw")]
+position = Vector2(877, 70)
+
+[node name="CERacines4" parent="." instance=ExtResource("20_oucr5")]
+position = Vector2(1143, 65)
+
+[node name="CERacines13" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("17_5f3bi")]
+position = Vector2(4480, 72)
+spe_item = NodePath("../CERacines1/SpeItem")
+
+[node name="CERacines14" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("18_4vrbs")]
+position = Vector2(4814, 68)
+spe_item = NodePath("../CERacines2/SpeItem")
+
+[node name="CERacines15" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("19_mdnbw")]
+position = Vector2(5087, 71)
+spe_item = NodePath("../CERacines3/SpeItem")
+
+[node name="CERacines16" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("20_oucr5")]
+position = Vector2(5353, 66)
+spe_item = NodePath("../CERacines4/SpeItem")
+
+[node name="CERacines5" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("17_5f3bi")]
+position = Vector2(1521, 69)
+spe_item = NodePath("../CERacines1/SpeItem")
+
+[node name="CERacines6" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("18_4vrbs")]
+position = Vector2(1855, 65)
+spe_item = NodePath("../CERacines2/SpeItem")
+
+[node name="CERacines7" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("19_mdnbw")]
+position = Vector2(2128, 68)
+spe_item = NodePath("../CERacines3/SpeItem")
+
+[node name="CERacines8" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("20_oucr5")]
+position = Vector2(2394, 63)
+spe_item = NodePath("../CERacines4/SpeItem")
+
+[node name="CERacines9" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("17_5f3bi")]
+position = Vector2(3169, 68)
+spe_item = NodePath("../CERacines1/SpeItem")
+
+[node name="CERacines10" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("18_4vrbs")]
+position = Vector2(2648, 64)
+spe_item = NodePath("../CERacines2/SpeItem")
+
+[node name="CERacines11" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("19_mdnbw")]
+position = Vector2(3538, 72)
+spe_item = NodePath("../CERacines3/SpeItem")
+
+[node name="CERacines12" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("20_oucr5")]
+position = Vector2(3804, 67)
+spe_item = NodePath("../CERacines4/SpeItem")
+
+[node name="CESerpent1" parent="." instance=ExtResource("21_ns354")]
+position = Vector2(925, 114)
+
+[node name="CESerpent2" parent="." instance=ExtResource("22_tgrjk")]
+position = Vector2(2760, 159)

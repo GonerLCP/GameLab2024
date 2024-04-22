@@ -105,11 +105,11 @@ func _on_room_detector_area_entered(area):
 		
 	moveCamera.emit(collision_shape.global_position.y - size.y/2,collision_shape.global_position.x - size.x/2,size.y,size.x)
 	
-	indice1 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/01.mp3")
-	indice2 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/02.mp3")
-	indice3 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/03.mp3")
-	numeroIndice = 1
-	$Timer.start()
+	#indice1 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/01.mp3")
+	#indice2 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/02.mp3")
+	#indice3 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/03.mp3")
+	#numeroIndice = 1
+	#$Timer.start()
 	pass # Replace with function body.
 
 func IndiceOrphee():

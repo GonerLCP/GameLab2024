@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b54rpwvv3oy4"]
+[gd_scene load_steps=25 format=3 uid="uid://b54rpwvv3oy4"]
 
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_47uyh"]
 [ext_resource type="Texture2D" uid="uid://dog5mq55ncicx" path="res://Assetts/vrac/Fond S7 jardin corrompu.png" id="1_o4qkj"]
@@ -19,8 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://cwssqjomfki6j" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre1.tscn" id="16_tnphi"]
 [ext_resource type="PackedScene" uid="uid://djqnr56i7hnh2" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre2.tscn" id="17_1ptum"]
 [ext_resource type="PackedScene" uid="uid://g77knxqrkovh" path="res://Nodes/Objets/ChampsDesLarmes/CDLArbre3.tscn" id="18_8g8ec"]
-[ext_resource type="PackedScene" uid="uid://c2juujtnqr0xh" path="res://Nodes/Portes/CEPorte.tscn" id="19_oxith"]
 [ext_resource type="PackedScene" uid="uid://bsybkweqjgxnx" path="res://Nodes/bateau_bougeant.tscn" id="20_chff5"]
+[ext_resource type="Texture2D" uid="uid://yh8g5scsgc6w" path="res://Assetts/S7 - Le Champs des Larmes/0EA820C2-BFE2-4E46-AF77-3EE12EEC6733.png" id="21_iqoiu"]
+[ext_resource type="Texture2D" uid="uid://xufq52gaogau" path="res://Assetts/S7 - Le Champs des Larmes/149006BB-8373-408A-8910-F46869FF5692.png" id="22_28dij"]
+[ext_resource type="PackedScene" uid="uid://uubtcyi4cjcw" path="res://Nodes/Portes/ATPorte.tscn" id="23_edpmg"]
 
 [sub_resource type="Curve2D" id="Curve2D_dihtm"]
 _data = {
@@ -154,10 +156,31 @@ spe_item = NodePath("../CDLArbre3/SpeItem")
 position = Vector2(5157, 579)
 path = NodePath("../BateauBougeant")
 
-[node name="CDLPorte" parent="." instance=ExtResource("19_oxith")]
-position = Vector2(5599, 748)
-scale = Vector2(2.54432, 2.54432)
-
 [node name="BateauBougeant" parent="." instance=ExtResource("20_chff5")]
 position = Vector2(4931, 401)
 curve = SubResource("Curve2D_dihtm")
+
+[node name="0ea820c2-bfe2-4e46-af77-3ee12eec6733" type="Sprite2D" parent="."]
+position = Vector2(871, 464)
+scale = Vector2(1.01452, 1.01452)
+texture = ExtResource("21_iqoiu")
+
+[node name="0ea820c2-bfe2-4e46-af77-3ee12eec6734" type="Sprite2D" parent="."]
+position = Vector2(4304, 727)
+scale = Vector2(0.462903, 0.462903)
+texture = ExtResource("21_iqoiu")
+
+[node name="149006bb-8373-408a-8910-f46869ff5692" type="Sprite2D" parent="."]
+position = Vector2(2061, 565)
+scale = Vector2(0.529435, 0.529435)
+texture = ExtResource("22_28dij")
+
+[node name="149006bb-8373-408a-8910-f46869ff5693" type="Sprite2D" parent="."]
+position = Vector2(3484, 565)
+scale = Vector2(0.529435, 0.529435)
+texture = ExtResource("22_28dij")
+flip_h = true
+
+[node name="ATPorte" parent="." instance=ExtResource("23_edpmg")]
+position = Vector2(5931, 814)
+scale = Vector2(2.23635, 2.23635)
