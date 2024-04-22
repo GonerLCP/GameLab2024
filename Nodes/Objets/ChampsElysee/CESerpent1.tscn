@@ -30,6 +30,7 @@ position = Vector2(32, -84)
 [node name="SpeItem" parent="." instance=ExtResource("3_csp5t")]
 numSalle = 5
 NomDeLaCle = "CEStatue3"
+numPorte = 7
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

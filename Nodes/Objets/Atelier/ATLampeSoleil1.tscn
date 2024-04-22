@@ -8,6 +8,7 @@
 radius = 319.601
 
 [node name="ATLampeSoleil1" type="Area2D" node_paths=PackedStringArray("spe_item")]
+scale = Vector2(0.144, 0.144)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_jtigb")
@@ -21,10 +22,11 @@ shape = SubResource("CircleShape2D_pd2tu")
 texture = ExtResource("2_78g0y")
 
 [node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-3, -55)
 
 [node name="SpeItem" parent="." instance=ExtResource("3_4ohds")]
-numSalle = 10
-NomDeLaCle = ""
+numSalle = 7
+NomDeLaCle = "ATLampeComplete1"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

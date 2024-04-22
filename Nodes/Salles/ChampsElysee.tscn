@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://u1bkwa26jqj8"]
+[gd_scene load_steps=22 format=3 uid="uid://u1bkwa26jqj8"]
 
 [ext_resource type="Texture2D" uid="uid://cdm262tkx3x5m" path="res://Assetts/vrac/Fond S6 Jardin.png" id="1_7iskp"]
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_caxkr"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://cboyumrm5upp1" path="res://Nodes/Objets/ChampsElysee/CERoche1.tscn" id="7_2rw6p"]
 [ext_resource type="PackedScene" uid="uid://c0l5o7q4p8d4h" path="res://Nodes/Objets/ChampsElysee/CERoche2.tscn" id="8_adn1b"]
 [ext_resource type="PackedScene" uid="uid://dd6cf0sug2yit" path="res://Nodes/Objets/ChampsElysee/CEStatue1.tscn" id="9_hqa3p"]
-[ext_resource type="PackedScene" uid="uid://l5oce220nofn" path="res://Nodes/Portes/RIPorte.tscn" id="10_aoj50"]
 [ext_resource type="PackedScene" uid="uid://c4c3nrtwjsn2d" path="res://Nodes/Objets/ChampsElysee/CEStatue2.tscn" id="10_best6"]
 [ext_resource type="PackedScene" uid="uid://cingxwfcwrttu" path="res://Nodes/Objets/Cle/CEStatue3.tscn" id="12_nnmai"]
 [ext_resource type="PackedScene" uid="uid://dnyurgcnftapa" path="res://Nodes/Portes/CDLPorte.tscn" id="13_6dv5g"]
@@ -113,9 +112,6 @@ position = Vector2(4126, 799)
 [node name="CEStatue2" parent="." instance=ExtResource("10_best6")]
 z_index = 2
 position = Vector2(843, 811)
-
-[node name="Porte" parent="." instance=ExtResource("10_aoj50")]
-position = Vector2(546, 1919)
 
 [node name="CEBuisson3" parent="." instance=ExtResource("2_8i8d1")]
 position = Vector2(2729, 916)

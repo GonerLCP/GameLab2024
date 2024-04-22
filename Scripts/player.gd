@@ -22,6 +22,7 @@ signal dissmiss_Press(pos1,pos2,coll1)
 signal moveCamera(top,left,bottom,right)
 func _ready():
 	dirTampon = false
+	$TeteOrphee.visible = false
 	IndiceOrphee()
 	pass # Replace with function body.
 
@@ -34,7 +35,10 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Jump") && is_on_floor() :
 		velocity.y = -jump_force
-	
+	if Input.is_action_just_pressed("decapit") :
+		$AnimatedSprite2D.visible = false
+		$TeteOrphee.visible = true
+		$AnimationPlayer.play("TeteQuiRoule",-1,1.0,false)
 	if Input.is_action_just_pressed("Interact") and ColliderInteract != null :
 		ColliderPris = ColliderInteract.name
 		Global.cleRecup[ColliderInteract.get_node("SpeItem").numPorte] = 1

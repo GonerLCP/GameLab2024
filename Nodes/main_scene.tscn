@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://26okc2klh1lh"]
+[gd_scene load_steps=16 format=3 uid="uid://26okc2klh1lh"]
 
 [ext_resource type="PackedScene" uid="uid://dam223tnnmi0k" path="res://Nodes/player.tscn" id="1_7qyhe"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_gqotu"]
@@ -9,16 +9,18 @@
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="6_02xjf"]
 [ext_resource type="PackedScene" uid="uid://u1bkwa26jqj8" path="res://Nodes/Salles/ChampsElysee.tscn" id="9_poyi1"]
 [ext_resource type="PackedScene" uid="uid://c2juujtnqr0xh" path="res://Nodes/Portes/CEPorte.tscn" id="10_ay16i"]
+[ext_resource type="PackedScene" uid="uid://bva50v1041ba2" path="res://Nodes/Salles/Atelier.tscn" id="10_ybiup"]
 [ext_resource type="PackedScene" uid="uid://b54rpwvv3oy4" path="res://Nodes/Salles/LeChampsDesLarmes.tscn" id="10_yyxeb"]
+[ext_resource type="PackedScene" uid="uid://c6ei7m5fnqvek" path="res://Nodes/Salles/Rivage.tscn" id="12_q3g5q"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhx7s"]
-size = Vector2(5940, 1080)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_il3ef"]
+size = Vector2(1976, 1079)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqcnp"]
 size = Vector2(5938.5, 1080)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_il3ef"]
-size = Vector2(1976, 1079)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87s7p"]
+size = Vector2(3954, 2160)
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_gqotu")
@@ -28,28 +30,60 @@ position = Vector2(987.333, 546)
 scale = Vector2(0.51441, 0.494444)
 texture = ExtResource("2_1ly4g")
 
-[node name="LeChampsDesLarmes" parent="." instance=ExtResource("10_yyxeb")]
-position = Vector2(7920, 0)
+[node name="Atelieremplacement" type="Node2D" parent="."]
+position = Vector2(13861, 0)
 
-[node name="Area2D" type="Area2D" parent="LeChampsDesLarmes"]
+[node name="Salle1Cam2" type="Area2D" parent="Atelieremplacement"]
+position = Vector2(1, 2)
 collision_layer = 256
 collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeChampsDesLarmes/Area2D"]
-position = Vector2(2970, 540)
-shape = SubResource("RectangleShape2D_jhx7s")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Atelieremplacement/Salle1Cam2"]
+position = Vector2(988, 539.5)
+shape = SubResource("RectangleShape2D_il3ef")
 
-[node name="ChampsElysee" parent="." instance=ExtResource("9_poyi1")]
+[node name="Atelier" parent="Atelieremplacement" instance=ExtResource("10_ybiup")]
+
+[node name="CDLEmplacement" type="Node2D" parent="."]
+position = Vector2(7922, 0)
+
+[node name="LeChampsDesLarmes" parent="CDLEmplacement" instance=ExtResource("10_yyxeb")]
+
+[node name="Area2D3" type="Area2D" parent="CDLEmplacement"]
+position = Vector2(18, 1264)
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CDLEmplacement/Area2D3"]
+position = Vector2(2950.75, -725)
+shape = SubResource("RectangleShape2D_sqcnp")
+
+[node name="CEEmplacement" type="Node2D" parent="."]
 position = Vector2(1980, 0)
 
-[node name="Area2D2" type="Area2D" parent="ChampsElysee"]
+[node name="ChampsElysee" parent="CEEmplacement" instance=ExtResource("9_poyi1")]
+
+[node name="Area2D4" type="Area2D" parent="CEEmplacement"]
 position = Vector2(20, 1265)
 collision_layer = 256
 collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ChampsElysee/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CEEmplacement/Area2D4"]
 position = Vector2(2950.75, -725)
 shape = SubResource("RectangleShape2D_sqcnp")
+
+[node name="RIEmplacement" type="Node2D" parent="."]
+position = Vector2(15838, 1)
+
+[node name="Rivage" parent="RIEmplacement" instance=ExtResource("12_q3g5q")]
+
+[node name="Area2D" type="Area2D" parent="RIEmplacement/Rivage"]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RIEmplacement/Rivage/Area2D"]
+position = Vector2(1978, 1080)
+shape = SubResource("RectangleShape2D_87s7p")
 
 [node name="Salle1Cam" type="Area2D" parent="."]
 collision_layer = 256
@@ -60,7 +94,7 @@ position = Vector2(988, 539.5)
 shape = SubResource("RectangleShape2D_il3ef")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(875, 887)
+position = Vector2(14416, 718)
 process_callback = 0
 limit_left = 0
 limit_top = 0
@@ -77,7 +111,7 @@ editor_draw_limits = true
 script = ExtResource("2_v0q0v")
 
 [node name="Player" parent="." instance=ExtResource("1_7qyhe")]
-position = Vector2(875, 887)
+position = Vector2(14416, 718)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")

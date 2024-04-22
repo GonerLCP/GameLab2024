@@ -1,16 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgcl71n3futoc"]
 
-[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_bgobr"]
-[ext_resource type="Texture2D" uid="uid://bnbng8krhu7il" path="res://Assetts/S8 - Atelier/LampeComplete1.png" id="2_ya4ct"]
-[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_xpqr3"]
+[ext_resource type="Script" path="res://Scripts/ObjetTest.gd" id="1_nemx0"]
+[ext_resource type="Texture2D" uid="uid://bnbng8krhu7il" path="res://Assetts/S8 - Atelier/LampeComplete1.png" id="2_weax2"]
+[ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_ui6vl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
 size = Vector2(647, 689)
 
 [node name="ATLampeComplete1" type="Area2D" node_paths=PackedStringArray("spe_item")]
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("1_bgobr")
+scale = Vector2(0.144, 0.144)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_nemx0")
 spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,13 +19,14 @@ position = Vector2(-2.5, -52.5)
 shape = SubResource("RectangleShape2D_lqorh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_ya4ct")
+texture = ExtResource("2_weax2")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
-[node name="SpeItem" parent="." instance=ExtResource("3_xpqr3")]
+[node name="SpeItem" parent="." instance=ExtResource("3_ui6vl")]
 numSalle = 10
 NomDeLaCle = ""
+numPorte = 9
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

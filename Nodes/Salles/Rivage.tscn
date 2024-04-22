@@ -1,16 +1,181 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6ei7m5fnqvek"]
+[gd_scene load_steps=20 format=3 uid="uid://c6ei7m5fnqvek"]
 
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_4qk1s"]
 [ext_resource type="Texture2D" uid="uid://bfp6q0wa8nouw" path="res://Assetts/vrac/Fond S9 plage.png" id="1_ccyei"]
+[ext_resource type="Script" path="res://Scripts/AnimationPlayer.gd" id="3_1qosd"]
+[ext_resource type="Texture2D" uid="uid://ck38ugy7jv7y" path="res://Assetts/S9 - Rivage/vague_bleue.png" id="3_ckmt0"]
+[ext_resource type="Texture2D" uid="uid://buvaxuk7u4twp" path="res://Assetts/S9 - Rivage/vague_noire.png" id="4_oijst"]
+[ext_resource type="Texture2D" uid="uid://dhatbojd8unof" path="res://Assetts/S9 - Rivage/rivage.png" id="5_a3c8p"]
+[ext_resource type="PackedScene" uid="uid://d00y0rbo4ilac" path="res://Nodes/Objets/Rivage/RIChevalet1.tscn" id="6_otf0j"]
+[ext_resource type="Texture2D" uid="uid://du0d4mtbn0mkm" path="res://Assetts/S9 - Rivage/soleil.png" id="7_8dkk0"]
+[ext_resource type="Texture2D" uid="uid://q5w6us4ckm5t" path="res://Assetts/S9 - Rivage/colonne.png" id="8_k4hu6"]
+[ext_resource type="PackedScene" uid="uid://c1i87250qbcqr" path="res://Nodes/Objets/Rivage/RITabouret.tscn" id="9_6md0x"]
+[ext_resource type="PackedScene" uid="uid://1p8ofi4bv84k" path="res://Nodes/Objets/Rivage/RIPot1.tscn" id="10_k7j3w"]
+[ext_resource type="PackedScene" uid="uid://dwpj1v7dxv0pa" path="res://Nodes/Objets/Rivage/RIPot2.tscn" id="11_a2xfn"]
+[ext_resource type="PackedScene" uid="uid://blckmp4glb8b4" path="res://Nodes/Objets/Rivage/RIPot3.tscn" id="12_ij3i1"]
+[ext_resource type="PackedScene" uid="uid://bgm7orcr8ew77" path="res://Nodes/Objets/Rivage/RIRoche.tscn" id="13_1rk1i"]
+[ext_resource type="PackedScene" uid="uid://t523ttfgoabg" path="res://Nodes/Objets/Rivage/RIToile1.tscn" id="14_ys087"]
+[ext_resource type="PackedScene" uid="uid://cckqc3ncww5fb" path="res://Nodes/Objets/Rivage/RIToile2.tscn" id="15_ro4tw"]
+
+[sub_resource type="Animation" id="Animation_nkbt5"]
+resource_name = "Vague"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VagueBleue:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2962.99, 2051), Vector2(3103, 2051)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VagueNoire:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3001, 2006), Vector2(2869, 2006)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer:active")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iblpd"]
+_data = {
+"Vague": SubResource("Animation_nkbt5")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5aorb"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Vage",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Rivage" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1977, 1080)
+position = Vector2(1978, 1080)
 scale = Vector2(1.03, 1)
 texture = ExtResource("1_ccyei")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_4qk1s")
 format = 2
-layer_0/tile_data = PackedInt32Array(720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0, 655381, 65537, 3, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 720926, 1, 0, 720927, 1, 0, 720928, 1, 0, 720929, 1, 0, 720930, 1, 0, 720931, 1, 0, 720932, 1, 0, 720933, 1, 0, 720934, 1, 0, 720935, 1, 0, 720936, 1, 0, 720937, 1, 0, 720938, 1, 0, 720939, 1, 0)
+layer_0/tile_data = PackedInt32Array(720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720914, 1, 0, 720913, 1, 0, 720912, 1, 0, 720911, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_iblpd")
+}
+speed_scale = 0.181
+script = ExtResource("3_1qosd")
+
+[node name="VagueBleue" type="Sprite2D" parent="."]
+position = Vector2(2962.99, 2051)
+scale = Vector2(0.654826, 0.654826)
+texture = ExtResource("3_ckmt0")
+
+[node name="VagueNoire" type="Sprite2D" parent="."]
+position = Vector2(3001, 2006)
+scale = Vector2(0.636723, 0.636723)
+texture = ExtResource("4_oijst")
+
+[node name="Rivage" type="Sprite2D" parent="."]
+position = Vector2(970.442, 1574.5)
+scale = Vector2(0.547196, 0.547196)
+texture = ExtResource("5_a3c8p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5aorb")
+animation = &"Vage"
+
+[node name="RIChevalet1" parent="." instance=ExtResource("6_otf0j")]
+position = Vector2(1541, 838)
+scale = Vector2(0.31763, 0.31763)
+
+[node name="RIChevalet2" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("6_otf0j")]
+position = Vector2(335, 870)
+scale = Vector2(0.259559, 0.259559)
+spe_item = NodePath("../RIChevalet1/SpeItem")
+
+[node name="RIChevalet3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("6_otf0j")]
+position = Vector2(1288, 862)
+scale = Vector2(0.259559, 0.259559)
+spe_item = NodePath("../RIChevalet1/SpeItem")
+
+[node name="Soleil" type="Sprite2D" parent="."]
+position = Vector2(2139, -509)
+texture = ExtResource("7_8dkk0")
+
+[node name="Colonne" type="Sprite2D" parent="."]
+position = Vector2(145, 708)
+scale = Vector2(0.479143, 0.479143)
+texture = ExtResource("8_k4hu6")
+
+[node name="Colonne2" type="Sprite2D" parent="."]
+position = Vector2(684, 707)
+scale = Vector2(0.479143, 0.479143)
+texture = ExtResource("8_k4hu6")
+
+[node name="ATToile3" parent="." instance=ExtResource("9_6md0x")]
+position = Vector2(497, 947)
+scale = Vector2(0.309985, 0.342994)
+
+[node name="ATToile4" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("9_6md0x")]
+position = Vector2(1112, 948)
+scale = Vector2(0.309985, 0.342994)
+spe_item = NodePath("../ATToile3/SpeItem")
+
+[node name="RIPot1" parent="." instance=ExtResource("10_k7j3w")]
+position = Vector2(1433, 959)
+scale = Vector2(0.384968, 0.384968)
+
+[node name="RIPot2" parent="." instance=ExtResource("11_a2xfn")]
+position = Vector2(1113, 853)
+scale = Vector2(0.494576, 0.494576)
+
+[node name="RIPot3" parent="." instance=ExtResource("12_ij3i1")]
+position = Vector2(498, 860)
+scale = Vector2(0.412599, 0.412599)
+
+[node name="RIRoche" parent="." instance=ExtResource("13_1rk1i")]
+position = Vector2(854, 960)
+scale = Vector2(0.480905, 0.480905)
+
+[node name="RIToile1" parent="." instance=ExtResource("14_ys087")]
+position = Vector2(338, 829)
+scale = Vector2(0.373995, 0.373995)
+
+[node name="RIToile2" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("14_ys087")]
+position = Vector2(1289, 822)
+scale = Vector2(0.373995, 0.373995)
+spe_item = NodePath("../RIToile1/SpeItem")
+
+[node name="RIToile3" parent="." instance=ExtResource("15_ro4tw")]
+position = Vector2(1545, 749)
+scale = Vector2(0.549383, 0.549383)

@@ -1,16 +1,165 @@
-[gd_scene load_steps=3 format=3 uid="uid://bva50v1041ba2"]
+[gd_scene load_steps=23 format=3 uid="uid://bva50v1041ba2"]
 
+[ext_resource type="Texture2D" uid="uid://b21k22e1ma5nr" path="res://Assetts/vrac/fond atelier.png" id="1_dqkii"]
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_jxokn"]
 [ext_resource type="Texture2D" uid="uid://qy3ugvfjnkts" path="res://Assetts/S8 - Atelier/Rideau.png" id="2_ixhtx"]
+[ext_resource type="Texture2D" uid="uid://c5mm7bk2vybmw" path="res://Assetts/S8 - Atelier/1C5481DF-6B0E-4747-9637-D8D54ED94AC7.png" id="2_vyp2y"]
+[ext_resource type="Texture2D" uid="uid://nwnh6pqfigy0" path="res://Assetts/S8 - Atelier/60DD0A44-9000-468F-9F66-C7434A063CDE.png" id="3_yyj26"]
+[ext_resource type="Texture2D" uid="uid://br1y7terk4grq" path="res://Assetts/S8 - Atelier/4265B26F-2EF8-4C40-84EC-D4C6EF673EFA.png" id="4_jq8sk"]
+[ext_resource type="Texture2D" uid="uid://c4odld08a65em" path="res://Assetts/S8 - Atelier/AD8A73C3-EA07-4D91-9BD9-0A5051A72FD1.png" id="5_8jjjy"]
+[ext_resource type="Texture2D" uid="uid://b2qyjb2weofwd" path="res://Assetts/S8 - Atelier/B2B088DB-A409-442C-8770-A1AA188CC868.png" id="6_03gha"]
+[ext_resource type="PackedScene" uid="uid://bergror58emia" path="res://Nodes/Objets/Atelier/ATChevalet2.tscn" id="8_utidw"]
+[ext_resource type="PackedScene" uid="uid://y1mvontviiac" path="res://Nodes/Objets/Atelier/ATChicha.tscn" id="9_2klr6"]
+[ext_resource type="PackedScene" uid="uid://b1uiomqxr8kws" path="res://Nodes/Objets/Atelier/ATLampe1.tscn" id="10_06lqv"]
+[ext_resource type="PackedScene" uid="uid://ccs0al3syc5b1" path="res://Nodes/Objets/Atelier/ATLampeSoleil1.tscn" id="11_kdlur"]
+[ext_resource type="PackedScene" uid="uid://dp5sxxjaitg2v" path="res://Nodes/Objets/Atelier/ATLampeSoleil2.tscn" id="12_s4ul7"]
+[ext_resource type="PackedScene" uid="uid://dv0kq7gxax1di" path="res://Nodes/Objets/Atelier/ATPetiteTable.tscn" id="13_qa6xj"]
+[ext_resource type="PackedScene" uid="uid://bsnh1irmncq18" path="res://Nodes/Objets/Atelier/ATPouf1.tscn" id="14_3tj7i"]
+[ext_resource type="PackedScene" uid="uid://jeiksql76hv7" path="res://Nodes/Objets/Atelier/ATToile2.tscn" id="15_7u5ii"]
+[ext_resource type="PackedScene" uid="uid://d2a3vl4lm0c3u" path="res://Nodes/Objets/Atelier/ATToile3.tscn" id="16_cp81m"]
+[ext_resource type="PackedScene" uid="uid://blik672tso44p" path="res://Nodes/Objets/Atelier/ATTable.tscn" id="17_6s7w1"]
+[ext_resource type="PackedScene" uid="uid://cbwpywjm0aap8" path="res://Nodes/Objets/Atelier/ATPouf2.tscn" id="18_ahb7g"]
+[ext_resource type="PackedScene" uid="uid://n45nfnm0ixyu" path="res://Nodes/Objets/Atelier/ATCable1.tscn" id="19_0bs2w"]
+[ext_resource type="PackedScene" uid="uid://dxq2tdi5sljvl" path="res://Nodes/Objets/Atelier/ATCable2.tscn" id="20_f15r8"]
+[ext_resource type="PackedScene" uid="uid://l5oce220nofn" path="res://Nodes/Portes/RIPorte.tscn" id="21_32g0h"]
 
 [node name="Atelier" type="Node2D"]
+
+[node name="FondAtelier" type="Sprite2D" parent="."]
+position = Vector2(990, 539)
+scale = Vector2(1.03, 1)
+texture = ExtResource("1_dqkii")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_jxokn")
 format = 2
 layer_0/tile_data = PackedInt32Array(720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0)
 
+[node name="RIPorte" parent="." instance=ExtResource("21_32g0h")]
+position = Vector2(1838, 820)
+
+[node name="1c5481df-6b0e-4747-9637-d8d54ed94ac7" type="Sprite2D" parent="."]
+position = Vector2(254, 406)
+scale = Vector2(0.332126, 0.332126)
+texture = ExtResource("2_vyp2y")
+
+[node name="60dd0a44-9000-468f-9f66-c7434a063cde" type="Sprite2D" parent="1c5481df-6b0e-4747-9637-d8d54ed94ac7"]
+position = Vector2(2441.85, 102.371)
+scale = Vector2(0.823178, 0.823178)
+texture = ExtResource("3_yyj26")
+
+[node name="4265b26f-2ef8-4c40-84ec-d4c6ef673efa" type="Sprite2D" parent="1c5481df-6b0e-4747-9637-d8d54ed94ac7"]
+position = Vector2(4079.78, 219.796)
+scale = Vector2(0.598611, 0.598611)
+texture = ExtResource("4_jq8sk")
+
+[node name="Ad8a73c3-ea07-4d91-9bd9-0a5051a72fd1" type="Sprite2D" parent="1c5481df-6b0e-4747-9637-d8d54ed94ac7"]
+position = Vector2(1433.19, 855.098)
+scale = Vector2(0.211856, 0.211856)
+texture = ExtResource("5_8jjjy")
+
+[node name="B2b088db-a409-442c-8770-a1aa188cc868" type="Sprite2D" parent="1c5481df-6b0e-4747-9637-d8d54ed94ac7"]
+position = Vector2(957.469, -270.982)
+scale = Vector2(0.486844, 0.486844)
+texture = ExtResource("6_03gha")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(989, 536)
 scale = Vector2(1.03, 1)
 texture = ExtResource("2_ixhtx")
+
+[node name="ATChevalet2" parent="." instance=ExtResource("8_utidw")]
+position = Vector2(1097, 862)
+scale = Vector2(0.265666, 0.267948)
+
+[node name="ATChevalet4" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("8_utidw")]
+position = Vector2(1525, 845)
+scale = Vector2(0.31684, 0.31684)
+spe_item = NodePath("../ATChevalet2/SpeItem")
+
+[node name="ATChevalet3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("8_utidw")]
+position = Vector2(230, 789)
+scale = Vector2(0.409446, 0.409446)
+spe_item = NodePath("../ATChevalet2/SpeItem")
+
+[node name="ATChicha" parent="." instance=ExtResource("9_2klr6")]
+position = Vector2(1187, 842)
+scale = Vector2(0.129287, 0.129287)
+
+[node name="ATLampe1" parent="." instance=ExtResource("10_06lqv")]
+position = Vector2(423, 309)
+scale = Vector2(0.144327, 0.144327)
+
+[node name="ATLampe2" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("10_06lqv")]
+position = Vector2(688, 345)
+scale = Vector2(0.144327, 0.144327)
+spe_item = NodePath("../ATLampe1/SpeItem")
+
+[node name="ATLampe4" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("10_06lqv")]
+position = Vector2(1084, 242)
+scale = Vector2(0.144327, 0.144327)
+spe_item = NodePath("../ATLampe1/SpeItem")
+
+[node name="ATLampe3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("10_06lqv")]
+position = Vector2(1453, 357)
+scale = Vector2(0.144327, 0.144327)
+spe_item = NodePath("../ATLampe1/SpeItem")
+
+[node name="ATLampeSoleil1" parent="." instance=ExtResource("11_kdlur")]
+position = Vector2(886, 220)
+
+[node name="ATLampeSoleil2" parent="." instance=ExtResource("12_s4ul7")]
+position = Vector2(1221, 344)
+
+[node name="ATpetiteTable" parent="." instance=ExtResource("13_qa6xj")]
+position = Vector2(1162, 931)
+scale = Vector2(0.142978, 0.142978)
+
+[node name="ATPouf1" parent="." instance=ExtResource("14_3tj7i")]
+position = Vector2(1466, 945)
+scale = Vector2(0.151489, 0.151489)
+
+[node name="ATToile2" parent="." instance=ExtResource("15_7u5ii")]
+position = Vector2(230, 732)
+scale = Vector2(0.32316, 0.403155)
+
+[node name="ATToile3" parent="." instance=ExtResource("16_cp81m")]
+position = Vector2(1529, 788)
+scale = Vector2(0.393547, 0.393547)
+
+[node name="ATTable" parent="." instance=ExtResource("17_6s7w1")]
+position = Vector2(599, 901)
+scale = Vector2(0.201006, 0.201006)
+
+[node name="ATPouf2" parent="." instance=ExtResource("18_ahb7g")]
+position = Vector2(284, 937)
+scale = Vector2(0.175638, 0.175638)
+
+[node name="ATCable1" parent="." instance=ExtResource("19_0bs2w")]
+position = Vector2(689, 168)
+scale = Vector2(0.256439, 0.256439)
+
+[node name="ATCable5" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("19_0bs2w")]
+position = Vector2(1454, 181)
+scale = Vector2(0.256439, 0.256439)
+spe_item = NodePath("../ATCable1/SpeItem")
+
+[node name="ATCable6" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("19_0bs2w")]
+position = Vector2(1228, 169)
+scale = Vector2(0.256439, 0.256439)
+spe_item = NodePath("../ATCable1/SpeItem")
+
+[node name="ATCable2" parent="." instance=ExtResource("20_f15r8")]
+position = Vector2(424, 190)
+scale = Vector2(0.247497, 0.247497)
+
+[node name="ATCable4" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("20_f15r8")]
+position = Vector2(1083, 121)
+scale = Vector2(0.247497, 0.247497)
+spe_item = NodePath("../ATCable2/SpeItem")
+
+[node name="ATCable3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("20_f15r8")]
+position = Vector2(886, 100)
+rotation = 3.14159
+scale = Vector2(0.247497, 0.247497)
+spe_item = NodePath("../ATCable2/SpeItem")

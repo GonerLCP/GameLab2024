@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://ghf25mdj5cmv"]
+
+[ext_resource type="Texture2D" uid="uid://dd2q4rkep7f6r" path="res://Assetts/vrac/TeteOrphee.png" id="1_oqk5x"]
+
+[sub_resource type="Animation" id="Animation_v6abf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TeteOrphee:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dj2w2"]
+resource_name = "TeteQuiRoule"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TeteOrphee:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4gcjw"]
+_data = {
+"RESET": SubResource("Animation_v6abf"),
+"TeteQuiRoule": SubResource("Animation_dj2w2")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4gcjw")
+}
+
+[node name="TeteOrphee" type="Sprite2D" parent="."]
+texture = ExtResource("1_oqk5x")

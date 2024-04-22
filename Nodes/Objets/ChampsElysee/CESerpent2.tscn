@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ccceegqiivwy3" path="res://Nodes/spe_item.tscn" id="3_gh5qo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqorh"]
-size = Vector2(375.022, 44.2869)
+size = Vector2(165.666, 132.041)
 
 [node name="CESerpent2" type="Area2D" node_paths=PackedStringArray("spe_item")]
 collision_layer = 2
@@ -14,8 +14,7 @@ script = ExtResource("1_4se0h")
 spe_item = NodePath("SpeItem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(40, -15)
-rotation = 1.26671
+position = Vector2(-17.5, -87.25)
 scale = Vector2(0.609661, 0.609661)
 shape = SubResource("RectangleShape2D_lqorh")
 
