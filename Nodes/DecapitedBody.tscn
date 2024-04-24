@@ -3,4 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://3w41kvlmgkxw" path="res://Assetts/S10 - Lesbos/decapitage_0002_Inserted-Image.png" id="1_t418p"]
 
 [node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.726, 0.726)
 texture = ExtResource("1_t418p")

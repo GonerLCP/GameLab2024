@@ -134,7 +134,7 @@ scale = Vector2(0.259559, 0.259559)
 spe_item = NodePath("../RIChevalet1/SpeItem")
 
 [node name="Soleil" type="Sprite2D" parent="."]
-position = Vector2(2139, -509)
+position = Vector2(2139, -628)
 texture = ExtResource("7_8dkk0")
 
 [node name="Colonne" type="Sprite2D" parent="."]

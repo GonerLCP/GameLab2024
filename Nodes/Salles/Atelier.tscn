@@ -170,20 +170,17 @@ rotation = 3.14159
 scale = Vector2(0.247497, 0.247497)
 spe_item = NodePath("../ATCable2/SpeItem")
 
-[node name="ATEncens1" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("23_elrf1")]
+[node name="ATEncens1" parent="." instance=ExtResource("23_elrf1")]
 position = Vector2(995.998, 914)
 scale = Vector2(0.271387, 0.271387)
-spe_item = NodePath("")
 
-[node name="ATPotion1" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("24_xhw7r")]
+[node name="ATPotion1" parent="." instance=ExtResource("24_xhw7r")]
 position = Vector2(659.999, 763)
 scale = Vector2(0.164067, 0.164067)
-spe_item = NodePath("")
 
-[node name="ATPotion2" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("25_eh8wm")]
+[node name="ATPotion2" parent="." instance=ExtResource("25_eh8wm")]
 position = Vector2(465, 767)
 scale = Vector2(0.155498, 0.155498)
-spe_item = NodePath("")
 
 [node name="ATCopieDePot1" parent="." instance=ExtResource("26_ovehs")]
 position = Vector2(370, 963)

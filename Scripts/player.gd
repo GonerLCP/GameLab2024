@@ -15,6 +15,12 @@ var animationLocked : bool = false
 var numeroIndice =0
 var jaiaucunehonte = 0 #compteurdecombiendeporteparcourue
 
+var Indices 
+var IndicesCE = ["Oh pittoresque jardin, si seulement je ne savais pas quelle hydre monstrueuse tu caches dans tes sous-bois", "Cupidon lui-même m'avertit du drame. Car alors que ma belle épousée s'égayait dans ces vertes campagnes, elle rencontra caché sous ses pas, l'Auteur de son trépas.", "Tandis que dans l'herbe se promenait mon Eurydice avec son escorte de Naïades, elle meurt, mordue au talon par la dent d’un serpent." ]
+var IndicesCDL = ["Mon Eurydice perdue, j'éclate en cris perçants, et me débonde en pleurs. Mais j’ai beau m’affliger, conjurer, et prier, je ne gagne qu'un rhume à force de crier.","Posé sous une branche je recommence ma chanson lamentable, et de mes notes douloureuses je pleurais Eurydice.","En entendant mon chant, les habitants de l’enfer, eux qui n’ont point de sang, versèrent des larmes, mouillant le poil chenu de mon pinceau."]
+var IndicesAT = ["La passion et la douleur sont les aliments de mon coeur, l’ultime lumière qui guide mon chant vers les cieux." ,"Par le nitre embrasé de ces enfers brûlants et de ces noirs flambeaux fumants, je me voyais, Moi, me consolant de mon douloureux amour, sur les creuses écailles de ma lyre.","Ma seule étoile est morte, et dans son  tombeau elle emporte, le soleil noir de ma Mélancolie"]
+var IndicesRI = ["J’arrivai alors, au bord du ciel splendide, la  mer sublime ce soir baignée d’or,devant l’âme immense du grand hymne d’un poète presque mort.","Tandis que je commençais à chanter, m’accompagnant de mon luth constellé, j'arrachais des pleurs aux âmes exsangues ; Tantale cessa de saisir l'onde toujours fuyante et toi, Sisyphe, tu t'assis sur ton rocher.","Alors, j’entendis les vagues réclamer, ma tête gracieuse et ma lyre en trophée."]
+
 var indice1
 var indice2
 var indice3
@@ -39,11 +45,13 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("decapit") :
 		var corpsdorphee = load("res://Nodes/DecapitedBody.tscn")
 		var objetTombe = corpsdorphee.instantiate()
-		objetTombe.position = global_position
-		add_child(objetTombe)
+		objetTombe.position = position
+		objetTombe.position.y = objetTombe.position.y - 165
+		$"..".add_child(objetTombe)
 		$AnimatedSprite2D.visible = false
 		$TeteOrphee.visible = true
 		$AnimationPlayer.play("TeteQuiRoule",-1,1.0,false)
+
 	if Input.is_action_just_pressed("Interact") and ColliderInteract != null :
 		ColliderPris = ColliderInteract.name
 		Global.cleRecup[ColliderInteract.get_node("SpeItem").numPorte] = 1
@@ -117,12 +125,22 @@ func _on_room_detector_area_entered(area):
 	if(jaiaucunehonte >= 4 ):
 		$"../Camera2D".zoom = Vector2(0.5,0.5)
 	
-	
+	$"../UI".get_child(1).set_text("")
 	#indice1 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/01.mp3")
 	#indice2 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/02.mp3")
 	#indice3 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/03.mp3")
-	#numeroIndice = 1
-	#$Timer.start()
+	numeroIndice = 0
+	
+	match(Global.currentRoom):
+		6:
+			Indices = IndicesCE
+		7:
+			Indices = IndicesCDL
+		8:
+			Indices = IndicesAT
+		9:
+			Indices = IndicesRI
+	$Timer.start()
 	pass # Replace with function body.
 
 func IndiceOrphee():
@@ -141,8 +159,14 @@ func IndiceOrphee():
 	
 	pass
 
+func sdkjfisj() :
+	if numeroIndice <= 2 : 
+		$"../UI".get_child(1).visible = true
+		$"../UI".get_child(1).set_text(Indices[numeroIndice])
+	numeroIndice = numeroIndice + 1
 
 func _on_timer_timeout():
-	IndiceOrphee()
+	#IndiceOrphee()
+	sdkjfisj()
 	$Timer.set_wait_time(5.0)
 	pass # Replace with function body.
