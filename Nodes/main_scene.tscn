@@ -100,7 +100,7 @@ position = Vector2(988, 539.5)
 shape = SubResource("RectangleShape2D_il3ef")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(13221, 775)
+position = Vector2(2299, 889)
 process_callback = 0
 limit_left = 0
 limit_top = 0
@@ -125,7 +125,7 @@ position = Vector2(508.635, -72)
 shape = SubResource("RectangleShape2D_3kue8")
 
 [node name="Player" parent="." instance=ExtResource("1_7qyhe")]
-position = Vector2(13221, 775)
+position = Vector2(2299, 889)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")

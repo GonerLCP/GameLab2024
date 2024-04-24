@@ -379,7 +379,7 @@ shape = SubResource("RectangleShape2D_uncgu")
 autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 10.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

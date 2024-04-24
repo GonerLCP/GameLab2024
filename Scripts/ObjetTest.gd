@@ -25,13 +25,13 @@ func _process(delta):
 		if test.get_node("SpeItem").numSalle == self.get_node("SpeItem").numSalle and test.get_node("SpeItem").numSalle != 10 :
 			if abs(SoiMeme.x - Lautre.x) <= 20 :
 				if abs(SoiMeme.y - Lautre.y) <= 20:
+					BonneCombinaisonAudio.play(0.0)
 					var ObjetACreer = load("res://Nodes/Objets/Cle/"+ self.get_node("SpeItem").NomDeLaCle + ".tscn")
 					var objetTombe = ObjetACreer.instantiate()
 					objetTombe.position = self.position
 					print(objetTombe.position)
 					print(self.global_position)
 					$"..".add_child(objetTombe)
-					BonneCombinaisonAudio.play(0.0)
 					self.queue_free()
 					test.queue_free()
 	pass
