@@ -18,7 +18,7 @@
 size = Vector2(1976, 1079)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqcnp"]
-size = Vector2(5938.5, 1080)
+size = Vector2(5938.25, 1079)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87s7p"]
 size = Vector2(3954, 2160)
@@ -37,6 +37,8 @@ texture = ExtResource("2_1ly4g")
 [node name="Atelieremplacement" type="Node2D" parent="."]
 position = Vector2(13861, 0)
 
+[node name="Atelier" parent="Atelieremplacement" instance=ExtResource("10_ybiup")]
+
 [node name="Salle1Cam2" type="Area2D" parent="Atelieremplacement"]
 position = Vector2(1, 2)
 collision_layer = 256
@@ -46,12 +48,11 @@ collision_mask = 256
 position = Vector2(988, 539.5)
 shape = SubResource("RectangleShape2D_il3ef")
 
-[node name="Atelier" parent="Atelieremplacement" instance=ExtResource("10_ybiup")]
-
 [node name="CDLEmplacement" type="Node2D" parent="."]
 position = Vector2(7922, 0)
 
 [node name="LeChampsDesLarmes" parent="CDLEmplacement" instance=ExtResource("10_yyxeb")]
+position = Vector2(-2, 0)
 
 [node name="Area2D3" type="Area2D" parent="CDLEmplacement"]
 position = Vector2(18, 1264)
@@ -59,7 +60,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CDLEmplacement/Area2D3"]
-position = Vector2(2950.75, -725)
+position = Vector2(2949.13, -724.5)
 shape = SubResource("RectangleShape2D_sqcnp")
 
 [node name="CEEmplacement" type="Node2D" parent="."]
@@ -68,6 +69,7 @@ position = Vector2(1980, 0)
 [node name="ChampsElysee" parent="CEEmplacement" instance=ExtResource("9_poyi1")]
 
 [node name="Area2D4" type="Area2D" parent="CEEmplacement"]
+visible = false
 position = Vector2(20, 1265)
 collision_layer = 256
 collision_mask = 256
@@ -98,7 +100,7 @@ position = Vector2(988, 539.5)
 shape = SubResource("RectangleShape2D_il3ef")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2261, 983)
+position = Vector2(13221, 775)
 process_callback = 0
 limit_left = 0
 limit_top = 0
@@ -123,7 +125,7 @@ position = Vector2(508.635, -72)
 shape = SubResource("RectangleShape2D_3kue8")
 
 [node name="Player" parent="." instance=ExtResource("1_7qyhe")]
-position = Vector2(2261, 983)
+position = Vector2(13221, 775)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")

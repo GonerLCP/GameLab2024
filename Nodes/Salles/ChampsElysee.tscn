@@ -106,7 +106,7 @@ scale = Vector2(1.73422, 1.73422)
 
 [node name="CEStatue1" parent="." instance=ExtResource("9_hqa3p")]
 z_index = 2
-position = Vector2(4126, 799)
+position = Vector2(4129, 800)
 
 [node name="CEStatue2" parent="." instance=ExtResource("10_best6")]
 z_index = 2
@@ -138,19 +138,19 @@ position = Vector2(877, 70)
 position = Vector2(1143, 65)
 
 [node name="CERacines13" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("17_5f3bi")]
-position = Vector2(4480, 72)
+position = Vector2(4480, 70)
 spe_item = NodePath("../CERacines1/SpeItem")
 
 [node name="CERacines14" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("18_4vrbs")]
-position = Vector2(4814, 68)
+position = Vector2(4814, 66)
 spe_item = NodePath("../CERacines2/SpeItem")
 
 [node name="CERacines15" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("19_mdnbw")]
-position = Vector2(5087, 71)
+position = Vector2(5087, 70)
 spe_item = NodePath("../CERacines3/SpeItem")
 
 [node name="CERacines16" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("20_oucr5")]
-position = Vector2(5353, 66)
+position = Vector2(5353, 65)
 spe_item = NodePath("../CERacines4/SpeItem")
 
 [node name="CERacines5" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("17_5f3bi")]
@@ -178,11 +178,11 @@ position = Vector2(2648, 64)
 spe_item = NodePath("../CERacines2/SpeItem")
 
 [node name="CERacines11" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("19_mdnbw")]
-position = Vector2(3538, 72)
+position = Vector2(3538, 70)
 spe_item = NodePath("../CERacines3/SpeItem")
 
 [node name="CERacines12" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("20_oucr5")]
-position = Vector2(3804, 67)
+position = Vector2(3804, 65)
 spe_item = NodePath("../CERacines4/SpeItem")
 
 [node name="CESerpent1" parent="." instance=ExtResource("21_ns354")]

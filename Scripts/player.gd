@@ -168,5 +168,5 @@ func sdkjfisj() :
 func _on_timer_timeout():
 	#IndiceOrphee()
 	sdkjfisj()
-	$Timer.set_wait_time(5.0)
+	$Timer.set_wait_time(10.0)
 	pass # Replace with function body.

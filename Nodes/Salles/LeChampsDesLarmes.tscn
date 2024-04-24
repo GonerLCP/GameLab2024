@@ -26,7 +26,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_dihtm"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -65, 105, 54.5405, -147.142, -54.5405, 147.142, 33, 369)
+"points": PackedVector2Array(0, 0, 0, 0, -65, 105, 54.5405, -147.142, -54.5405, 147.142, -13, 365)
 }
 point_count = 2
 
@@ -44,17 +44,17 @@ layer_0/tile_data = PackedInt32Array(720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 7
 
 [node name="CDLBuste" parent="." instance=ExtResource("2_eacam")]
 z_index = 2
-position = Vector2(3026, 853)
+position = Vector2(3025, 855)
 scale = Vector2(0.320926, 0.320926)
 
 [node name="CDLChaise1" parent="." instance=ExtResource("3_08a31")]
 z_index = 2
-position = Vector2(2183, 883)
+position = Vector2(2182, 887)
 scale = Vector2(0.265947, 0.265947)
 
 [node name="CDLChaise2" parent="." instance=ExtResource("4_rxhdq")]
 z_index = 2
-position = Vector2(2429, 878)
+position = Vector2(2431, 881)
 scale = Vector2(0.268323, 0.268323)
 
 [node name="CDLFontaine" parent="." instance=ExtResource("5_git7v")]
@@ -69,7 +69,7 @@ scale = Vector2(0.524407, 0.524407)
 
 [node name="CDLParterre2" parent="." instance=ExtResource("8_ysaaa")]
 z_index = 2
-position = Vector2(645, 930)
+position = Vector2(647, 931)
 scale = Vector2(0.371026, 0.371026)
 
 [node name="CDLParterre3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("8_ysaaa")]
@@ -85,7 +85,7 @@ scale = Vector2(0.368178, 0.368178)
 
 [node name="CDLRonce2" parent="." instance=ExtResource("10_b6356")]
 z_index = 2
-position = Vector2(1195, 916)
+position = Vector2(1195, 918)
 scale = Vector2(0.47972, 0.47972)
 
 [node name="CDLRonce3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("10_b6356")]
@@ -96,12 +96,12 @@ spe_item = NodePath("../CDLRonce2/SpeItem")
 
 [node name="CDLStatue" parent="." instance=ExtResource("11_267ai")]
 z_index = 2
-position = Vector2(1877, 776)
+position = Vector2(1877, 778)
 scale = Vector2(0.430565, 0.430565)
 
 [node name="CDLTable" parent="." instance=ExtResource("12_lohjp")]
 z_index = 2
-position = Vector2(2309, 898)
+position = Vector2(2309, 900)
 scale = Vector2(0.32609, 0.32609)
 
 [node name="CDLTige" parent="." instance=ExtResource("13_fmomj")]
@@ -121,7 +121,7 @@ scale = Vector2(0.368354, 0.368354)
 
 [node name="CDLVase3" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("15_vm7go")]
 z_index = 2
-position = Vector2(123, 874)
+position = Vector2(126, 875)
 scale = Vector2(0.368354, 0.368354)
 spe_item = NodePath("../CDLVase2/SpeItem")
 
@@ -143,7 +143,7 @@ scale = Vector2(0.406195, 0.406195)
 
 [node name="CDLArbre3" parent="." instance=ExtResource("18_8g8ec")]
 z_index = 2
-position = Vector2(1014, 660)
+position = Vector2(1014, 664)
 scale = Vector2(0.418679, 0.449091)
 
 [node name="CDLArbre4" parent="." node_paths=PackedStringArray("spe_item") instance=ExtResource("18_8g8ec")]
