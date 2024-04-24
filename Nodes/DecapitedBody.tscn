@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl0m2027asqls"]
+
+[ext_resource type="Texture2D" uid="uid://3w41kvlmgkxw" path="res://Assetts/S10 - Lesbos/decapitage_0002_Inserted-Image.png" id="1_t418p"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_t418p")

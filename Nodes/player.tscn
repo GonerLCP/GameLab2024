@@ -315,7 +315,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_dj2w2"]
 resource_name = "TeteQuiRoule"
-length = 1.5
+length = 2.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -324,7 +324,7 @@ tracks/0/path = NodePath("TeteOrphee:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 6.28319]
@@ -387,7 +387,8 @@ libraries = {
 }
 
 [node name="TeteOrphee" type="Sprite2D" parent="."]
-position = Vector2(0, -45)
+position = Vector2(0, -33)
+scale = Vector2(0.726, 0.726)
 texture = ExtResource("67_5jjxg")
 
 [connection signal="area_entered" from="DroiteInteract" to="." method="_on_droite_area_entered"]

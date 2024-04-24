@@ -9,6 +9,3 @@ func _ready():
 		cleRecup.append(0)
 	pass # Replace with function body.i
 
-func _process(delta):
-	print(currentRoom)
-	pass

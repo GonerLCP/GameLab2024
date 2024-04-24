@@ -31,6 +31,7 @@ func _process(delta):
 					print(objetTombe.position)
 					print(self.global_position)
 					$"..".add_child(objetTombe)
+					BonneCombinaisonAudio.play(0.0)
 					self.queue_free()
 					test.queue_free()
 	pass

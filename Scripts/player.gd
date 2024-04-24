@@ -13,6 +13,7 @@ var dirTampon : bool
 var horizontal_direction : Vector2 = Vector2.ZERO
 var animationLocked : bool = false
 var numeroIndice =0
+var jaiaucunehonte = 0 #compteurdecombiendeporteparcourue
 
 var indice1
 var indice2
@@ -36,6 +37,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Jump") && is_on_floor() :
 		velocity.y = -jump_force
 	if Input.is_action_just_pressed("decapit") :
+		var corpsdorphee = load("res://Nodes/DecapitedBody.tscn")
+		var objetTombe = corpsdorphee.instantiate()
+		objetTombe.position = global_position
+		add_child(objetTombe)
 		$AnimatedSprite2D.visible = false
 		$TeteOrphee.visible = true
 		$AnimationPlayer.play("TeteQuiRoule",-1,1.0,false)
@@ -108,6 +113,10 @@ func _on_room_detector_area_entered(area):
 		size.x = view_size.x
 		
 	moveCamera.emit(collision_shape.global_position.y - size.y/2,collision_shape.global_position.x - size.x/2,size.y,size.x)
+	jaiaucunehonte= jaiaucunehonte + 1
+	if(jaiaucunehonte >= 4 ):
+		$"../Camera2D".zoom = Vector2(0.5,0.5)
+	
 	
 	#indice1 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/01.mp3")
 	#indice2 = load("res://Musique/Indices/S"+ str(Global.currentRoom) + "/02.mp3")

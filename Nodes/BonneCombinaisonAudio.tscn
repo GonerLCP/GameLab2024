@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyj482mu4a81o"]
+
+[ext_resource type="AudioStream" uid="uid://bt25xi4vc2f3c" path="res://Musique/bonne combinaison.wav" id="1_4mf8o"]
+
+[node name="BonneCombinaisonAudio" type="AudioStreamPlayer"]
+stream = ExtResource("1_4mf8o")

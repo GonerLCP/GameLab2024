@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://26okc2klh1lh"]
+[gd_scene load_steps=18 format=3 uid="uid://26okc2klh1lh"]
 
 [ext_resource type="PackedScene" uid="uid://dam223tnnmi0k" path="res://Nodes/player.tscn" id="1_7qyhe"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_gqotu"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cgd2ex3qljd8r" path="res://Nodes/Objets/ObjetTest.tscn" id="3_hhs2i"]
 [ext_resource type="PackedScene" uid="uid://cmu3j2r6kjcvu" path="res://Nodes/ui.tscn" id="4_6vvji"]
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="6_02xjf"]
+[ext_resource type="Script" path="res://Scripts/ChangementDeNiveau.gd" id="8_ga21v"]
 [ext_resource type="PackedScene" uid="uid://u1bkwa26jqj8" path="res://Nodes/Salles/ChampsElysee.tscn" id="9_poyi1"]
 [ext_resource type="PackedScene" uid="uid://c2juujtnqr0xh" path="res://Nodes/Portes/CEPorte.tscn" id="10_ay16i"]
 [ext_resource type="PackedScene" uid="uid://bva50v1041ba2" path="res://Nodes/Salles/Atelier.tscn" id="10_ybiup"]
@@ -21,6 +22,9 @@ size = Vector2(5938.5, 1080)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87s7p"]
 size = Vector2(3954, 2160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kue8"]
+size = Vector2(2435.27, 395.094)
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_gqotu")
@@ -94,7 +98,7 @@ position = Vector2(988, 539.5)
 shape = SubResource("RectangleShape2D_il3ef")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(14416, 718)
+position = Vector2(2261, 983)
 process_callback = 0
 limit_left = 0
 limit_top = 0
@@ -110,8 +114,16 @@ drag_bottom_margin = 0.4
 editor_draw_limits = true
 script = ExtResource("2_v0q0v")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(18212, 2479)
+script = ExtResource("8_ga21v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(508.635, -72)
+shape = SubResource("RectangleShape2D_3kue8")
+
 [node name="Player" parent="." instance=ExtResource("1_7qyhe")]
-position = Vector2(14416, 718)
+position = Vector2(2261, 983)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -132,5 +144,6 @@ position = Vector2(194, 826)
 [node name="CEPorte" parent="." instance=ExtResource("10_ay16i")]
 position = Vector2(1978, 809)
 
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="dissmiss_Press" from="Player" to="." method="_on_player_dissmiss_press"]
 [connection signal="moveCamera" from="Player" to="Camera2D" method="_on_player_move_camera"]

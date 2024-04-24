@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c6ei7m5fnqvek"]
+[gd_scene load_steps=23 format=3 uid="uid://c6ei7m5fnqvek"]
 
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_4qk1s"]
 [ext_resource type="Texture2D" uid="uid://bfp6q0wa8nouw" path="res://Assetts/vrac/Fond S9 plage.png" id="1_ccyei"]
@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://bgm7orcr8ew77" path="res://Nodes/Objets/Rivage/RIRoche.tscn" id="13_1rk1i"]
 [ext_resource type="PackedScene" uid="uid://t523ttfgoabg" path="res://Nodes/Objets/Rivage/RIToile1.tscn" id="14_ys087"]
 [ext_resource type="PackedScene" uid="uid://cckqc3ncww5fb" path="res://Nodes/Objets/Rivage/RIToile2.tscn" id="15_ro4tw"]
+[ext_resource type="Texture2D" uid="uid://umjjrbblftgq" path="res://Assetts/S9 - Rivage/vague.png" id="17_xwd14"]
+[ext_resource type="PackedScene" uid="uid://bjmq308xo4nud" path="res://Nodes/Objets/Rivage/RILyreDroite.tscn" id="18_lg0dq"]
+[ext_resource type="PackedScene" uid="uid://bbcdgxy2jqk44" path="res://Nodes/Objets/Rivage/RILyreGauche.tscn" id="19_20nw8"]
 
 [sub_resource type="Animation" id="Animation_nkbt5"]
 resource_name = "Vague"
@@ -96,12 +99,14 @@ speed_scale = 0.181
 script = ExtResource("3_1qosd")
 
 [node name="VagueBleue" type="Sprite2D" parent="."]
-position = Vector2(2962.99, 2051)
+visible = false
+position = Vector2(3080.49, 2051)
 scale = Vector2(0.654826, 0.654826)
 texture = ExtResource("3_ckmt0")
 
 [node name="VagueNoire" type="Sprite2D" parent="."]
-position = Vector2(3001, 2006)
+visible = false
+position = Vector2(2890.23, 2006)
 scale = Vector2(0.636723, 0.636723)
 texture = ExtResource("4_oijst")
 
@@ -179,3 +184,15 @@ spe_item = NodePath("../RIToile1/SpeItem")
 [node name="RIToile3" parent="." instance=ExtResource("15_ro4tw")]
 position = Vector2(1545, 749)
 scale = Vector2(0.549383, 0.549383)
+
+[node name="Vague" type="Sprite2D" parent="."]
+position = Vector2(2890.9, 1219.5)
+scale = Vector2(1.21023, 1.21023)
+texture = ExtResource("17_xwd14")
+
+[node name="RILyreDroite" parent="." instance=ExtResource("18_lg0dq")]
+position = Vector2(3443, 1018)
+rotation = -0.107248
+
+[node name="RILyreGauche" parent="." instance=ExtResource("19_20nw8")]
+position = Vector2(2246, 753)

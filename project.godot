@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 Global="*res://Scripts/Global.gd"
 GlobalAudioStreamPlayer="*res://Nodes/audio_stream_player.tscn"
+BonneCombinaisonAudio="*res://Nodes/BonneCombinaisonAudio.tscn"
+TransitionScreen="*res://Nodes/transition_screen.tscn"
 
 [display]
 

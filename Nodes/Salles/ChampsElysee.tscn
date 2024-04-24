@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://u1bkwa26jqj8"]
+[gd_scene load_steps=21 format=3 uid="uid://u1bkwa26jqj8"]
 
 [ext_resource type="Texture2D" uid="uid://cdm262tkx3x5m" path="res://Assetts/vrac/Fond S6 Jardin.png" id="1_7iskp"]
 [ext_resource type="TileSet" uid="uid://dxn5e27dcknej" path="res://Assetts/Tiles/tilesetDeFou.tres" id="1_caxkr"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://c0l5o7q4p8d4h" path="res://Nodes/Objets/ChampsElysee/CERoche2.tscn" id="8_adn1b"]
 [ext_resource type="PackedScene" uid="uid://dd6cf0sug2yit" path="res://Nodes/Objets/ChampsElysee/CEStatue1.tscn" id="9_hqa3p"]
 [ext_resource type="PackedScene" uid="uid://c4c3nrtwjsn2d" path="res://Nodes/Objets/ChampsElysee/CEStatue2.tscn" id="10_best6"]
-[ext_resource type="PackedScene" uid="uid://cingxwfcwrttu" path="res://Nodes/Objets/Cle/CEStatue3.tscn" id="12_nnmai"]
 [ext_resource type="PackedScene" uid="uid://dnyurgcnftapa" path="res://Nodes/Portes/CDLPorte.tscn" id="13_6dv5g"]
 [ext_resource type="PackedScene" uid="uid://yveu6jpp8y8v" path="res://Nodes/Objets/ChampsElysee/CERacines1.tscn" id="17_5f3bi"]
 [ext_resource type="PackedScene" uid="uid://5kk4lnsvgsm5" path="res://Nodes/Objets/ChampsElysee/CERacines2.tscn" id="18_4vrbs"]
@@ -30,8 +29,8 @@ scale = Vector2(1.03108, 1)
 texture = ExtResource("1_7iskp")
 
 [node name="1b5004f3-4dd6-4809-a1b9-0f5cb1c8777c" type="Sprite2D" parent="."]
-position = Vector2(1707, 759)
-scale = Vector2(0.28629, 0.28629)
+position = Vector2(1702, 730)
+scale = Vector2(0.309274, 0.309274)
 texture = ExtResource("2_5h82d")
 
 [node name="1b5004f3-4dd6-4809-a1b9-0f5cb1c8777c2" type="Sprite2D" parent="."]
@@ -40,28 +39,28 @@ scale = Vector2(0.28629, 0.28629)
 texture = ExtResource("2_5h82d")
 
 [node name="32f8d6fd-1f3a-47bc-830c-1167274fe20c" type="Sprite2D" parent="."]
-position = Vector2(625, 674)
-scale = Vector2(0.377016, 0.377016)
+position = Vector2(282, 548)
+scale = Vector2(0.542137, 0.542137)
 texture = ExtResource("3_louhv")
 
 [node name="32f8d6fd-1f3a-47bc-830c-1167274fe20c3" type="Sprite2D" parent="."]
-position = Vector2(2722, 728)
-scale = Vector2(0.377016, 0.377016)
+position = Vector2(2656.58, 681.75)
+scale = Vector2(0.414314, 0.414314)
 texture = ExtResource("3_louhv")
 
 [node name="32f8d6fd-1f3a-47bc-830c-1167274fe20c2" type="Sprite2D" parent="."]
-position = Vector2(5261, 699)
-scale = Vector2(0.377016, 0.377016)
+position = Vector2(5117.07, 597.25)
+scale = Vector2(0.459072, 0.459072)
 texture = ExtResource("3_louhv")
 
 [node name="142a5c79-099d-43c7-8e7b-024eba2a82b4" type="Sprite2D" parent="."]
-position = Vector2(5687, 554)
-scale = Vector2(0.506452, 0.506452)
+position = Vector2(5653, 443)
+scale = Vector2(0.592742, 0.592742)
 texture = ExtResource("4_ur82x")
 
 [node name="142a5c79-099d-43c7-8e7b-024eba2a82b6" type="Sprite2D" parent="."]
-position = Vector2(4189, 549)
-scale = Vector2(0.506452, 0.506452)
+position = Vector2(4214, 455)
+scale = Vector2(0.585484, 0.585484)
 texture = ExtResource("4_ur82x")
 
 [node name="142a5c79-099d-43c7-8e7b-024eba2a82b5" type="Sprite2D" parent="."]
@@ -122,10 +121,6 @@ position = Vector2(3028, 729)
 
 [node name="CEColonne4" parent="." instance=ExtResource("5_4ugta")]
 position = Vector2(4592, 729)
-
-[node name="CEStatue3" parent="." instance=ExtResource("12_nnmai")]
-position = Vector2(188, 973)
-scale = Vector2(1.16346, 1.16346)
 
 [node name="CDLPorte" parent="." instance=ExtResource("13_6dv5g")]
 position = Vector2(5938, 808)

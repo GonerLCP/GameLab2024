@@ -27,8 +27,7 @@ texture = ExtResource("2_4l1kg")
 position = Vector2(-42, -150)
 
 [node name="SpeItem" parent="." instance=ExtResource("3_h0j6t")]
-numSalle = 5
-NomDeLaCle = "CEStatue3"
+numSalle = 10
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
