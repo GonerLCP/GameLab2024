@@ -186,13 +186,13 @@ position = Vector2(1545, 749)
 scale = Vector2(0.549383, 0.549383)
 
 [node name="Vague" type="Sprite2D" parent="."]
-position = Vector2(2890.9, 1219.5)
+position = Vector2(2898.9, 1355.5)
 scale = Vector2(1.21023, 1.21023)
 texture = ExtResource("17_xwd14")
 
 [node name="RILyreDroite" parent="." instance=ExtResource("18_lg0dq")]
-position = Vector2(3443, 1018)
+position = Vector2(3451, 1154)
 rotation = -0.107248
 
 [node name="RILyreGauche" parent="." instance=ExtResource("19_20nw8")]
-position = Vector2(2246, 753)
+position = Vector2(2254, 888.997)

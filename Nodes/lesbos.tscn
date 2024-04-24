@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsti7tmhib1jh"]
+[gd_scene load_steps=11 format=3 uid="uid://dsti7tmhib1jh"]
 
 [ext_resource type="Texture2D" uid="uid://cqt1j0q625ftv" path="res://Assetts/vrac/Fond S10 Lesbos.png" id="1_kqorq"]
 [ext_resource type="Texture2D" uid="uid://bme1t5jhihnub" path="res://Assetts/S10 - Lesbos/vagues2.png" id="2_b5oma"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bh2afe0v6sk2o" path="res://Assetts/S10 - Lesbos/Copie de TeteOrphee.png" id="6_kdbq5"]
 [ext_resource type="Texture2D" uid="uid://b3nbtqrgh73q2" path="res://Assetts/S10 - Lesbos/logo1-blanc-lyre.png" id="7_2ckrw"]
 [ext_resource type="Script" path="res://Nodes/TravlingLesbos.gd" id="7_7lw0y"]
+[ext_resource type="Texture2D" uid="uid://bo4fg7x3dg402" path="res://Assetts/S10 - Lesbos/soleil.png" id="9_p8a6b"]
 
 [sub_resource type="Curve2D" id="Curve2D_se7y7"]
 _data = {
@@ -51,7 +52,7 @@ rotation = -0.789032
 texture = ExtResource("6_kdbq5")
 
 [node name="Logo1-blanc-lyre" type="Sprite2D" parent="."]
-position = Vector2(960, -3780)
+position = Vector2(969, -3699)
 texture = ExtResource("7_2ckrw")
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -74,5 +75,9 @@ editor_draw_limits = true
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Soleil" type="Sprite2D" parent="."]
+position = Vector2(960, -5035)
+texture = ExtResource("9_p8a6b")
 
 [connection signal="timeout" from="Timer" to="Path2D" method="_on_timer_timeout"]
